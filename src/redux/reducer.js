@@ -1,6 +1,12 @@
 const initialState = {
     cat: {},
-    catsList: []
+    catsList: [
+        {
+            name: 'bailey',
+            age: '6 years',
+            gender: 'F'
+        }
+    ]
 }
 
 const SET_CATS_LIST = "SET_CATS_LIST";
@@ -22,15 +28,15 @@ export default function reducer(state=initialState, action) {
 
 export function setCatsList(catsList) {
     return {
-        type: LOGGED_OUT,
-        action: catsList
+        type: SET_CATS_LIST,
+        payload: catsList
     } 
 }
 
 export function login(user) {
     return {
         type: LOGGED_OUT,
-        action: user
+        payload: user
     } 
 }
 

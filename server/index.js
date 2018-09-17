@@ -11,12 +11,14 @@ app.use(bodyParser.json());
 
 massive(process.env.CONNECTION_STRING).then(database => {
     app.set('db', database);
-    console.log('she asked me how to install react');
+    console.log('she asked me how to run nodemon');
   }).catch(error => {
     console.log('-------------- database issue', error);
   });
 
-  const PORT = 4321;
+app.get('/api/cats', controller.setCatalog);
+
+  const PORT = 5432;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} `);
 });
