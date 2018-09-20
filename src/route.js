@@ -20,7 +20,7 @@ export default (
         <Route component={LocationSearch} exact path="/adopt/location-search" />
         
         <Route component={Catalog} exact path="/adopt/catalog" />
-        <Route component={CatBio} exact path="/adopt/cat_bio" />
+        <Route component={CatBio} exact path="/adopt/cat_bio/:id" />
         <Route component={ApplicationForm} exact path="/adopt/application" />
 
         <Route component={About} exact path="/about" />

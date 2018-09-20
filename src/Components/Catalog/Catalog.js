@@ -4,7 +4,7 @@ import {setCatsList} from '../../redux/reducer';
 import {connect} from 'react-redux';
 import Header from '../Header/Header';
 import './catalog.css';
-import couchcat from '../../media/tucker-good-499943-unsplash.jpg';
+import couchcat from '../../media/copytucker-good-499943-unsplash copy.jpg';
 import {Link} from 'react-router-dom';
 
 class Catalog extends Component {
@@ -19,14 +19,14 @@ class Catalog extends Component {
             this.props.setCatsList(res.data)
         }).catch(err => console.log('err', err));  
     }
-    
+
     render() { 
         const {catsList} = this.props;
         console.log(catsList);
         
         let mappedList = catsList.map((cat, i) => {
             return (
-                <Link to ="/adopt/cat_bio"><div className="row">
+                <Link to ={`/adopt/cat_bio/${cat.id}`}><div className="row">
                     <div className="mapped-cat-list" key={i}>
                         <img className="cat-img" src={cat.img}/>
                         <p className="cat-name">{cat.name}</p> 

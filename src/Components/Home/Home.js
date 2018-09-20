@@ -21,29 +21,31 @@ class Home extends Component {
             <div>
                 {/* <button onClick={login}>Admin Login</button> */}
                 <div className= "landingOne">
-                    <img  src={firstCatImage}></img>
-                    <div className="left-side1">
-                        <h1>
-                            <div>Adopt your new</div>
-                            <div>best friend</div>
+                    {/* <img className="homepage-img" src={firstCatImage}></img> */}
+                    <div className="left-side1-container">
+                        <h1 className="left-side1">
+                            Adopt your new
                         </h1>
+                        <h1 className="left-side12">best friend
+                        </h1>   
+                        <Link to='/adopt'><button className="left-side1-btn">Find a cat</button></Link>  
                     </div>
-                    <Link to='/adopt'><button className="left-side1-btn">Find a cat</button></Link>
+                    
                 </div>
                 <div className= "landingTwo">
-                    <img  src={secondCatImage}></img>
-                    <div className="right-side"> 
-                        <h1 className="right-align-text">Meet AZ Rain</h1>
-                        <p>Our mission is to rescue and adopt out the adoptable cats and educate the public on the care, safety, and need to have their pets spayed/neutered.
+                    <img className="homepage-img" src={secondCatImage}></img>
+                    <div className="right-side-container"> 
+                        <h1 className="right-align-h1">Meet AZ Rain</h1>
+                        <p className="right-side-p-text">Our mission is to rescue and adopt out the adoptable cats and educate the public on the care, safety, and need to have their pets spayed/neutered.
                         </p>
                         <Link to='/about'><button className="right-side1-btn">Learn More</button></Link>
                     </div>
                     
                 </div>
                 <div className= "landingThree">
-                    <img  src={thirdCatImage}></img>
+                    <img className="homepage-img" src={thirdCatImage}></img>
                     <div className="left-side2">
-                        <h1>How can you help?</h1>
+                        <h1 className="left-align-text2">How can you help?</h1>
                         <p className="donate-text">RAIN is always looking for people to help in a variety of ways. If you are interested in helping check here to see how you can help.
                         </p>
                         <Link to='/adopt'><button className="left-side2-btn">Donate</button></Link>

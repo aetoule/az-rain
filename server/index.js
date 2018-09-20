@@ -17,8 +17,9 @@ massive(process.env.CONNECTION_STRING).then(database => {
   });
 
 app.get('/api/cats', controller.setCatalog);
+app.get('/api/cats/:id', controller.setCat);
 
-  const PORT = 5432;
+const PORT = 5432;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} `);
 });
