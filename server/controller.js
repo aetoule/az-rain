@@ -18,5 +18,38 @@ module.exports = {
         .catch(err => {
             res.status(500).send({errorMessage: "Error with getting catalog."}, err);
         })
+    },
+
+    addCat: (req, res) => {
+        const dbInstance = req.app.get('db');
+        let {img, name, age, description} = req.body;
+        dbInstance.add_cat([img, name, age, description])
+        .then(stuff => {
+            res.status(200).send(stuff)})
+        
+        .catch(err => {
+            res.status(500).send({errorMessage: "Error with getting catalog."}, err);
+        })
+    },
+
+    updateCat: (req, res) => {
+        const dbInstance = req.app.get('db');
+        let {id} = req.params;
+        let {img, name, age, description} = req.body;
+        // console.log(req.body);
+        dbInstance.update_cat([id, img, name, age, description])
+        .then(stuff => {
+            res.status(200)})
+        .catch(err => {
+            res.status(500).send({errorMessage: "Error with updating kitty."}, err);
+        })
+
+    },
+    deleteCat(req, res) {
+        const dbInstance = req.app.get('db');
+        const {id} = req.params;
+        dbInstance.delete_cat(+id)
+        .then(cats => {res.status(200).send(cats)})
+        .catch(err => console.log('errorMessage: error deleting kitty', err));
     }
 }

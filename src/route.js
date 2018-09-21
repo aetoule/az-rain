@@ -4,7 +4,9 @@ import Home from './Components/Home/Home';
 import Adopt from './Components/Adopt/Adopt';
 import LocationSearch from './Components/LocationSearch/LocationSearch';
 import Catalog from './Components/Catalog/Catalog';
+import AdminAdd from './Components/AdminAdd/AdminAdd';
 import CatBio from './Components/CatBio/CatBio';
+import AdminEdit from './Components/AdminEdit/AdminEdit';
 import ApplicationForm from './Components/ApplicationForm/ApplicationForm';
 import About from './Components/About/About';
 import HelpRain from './Components/HelpRain/HelpRain';
@@ -13,14 +15,15 @@ import Contact from './Components/Contact/Contact';
 
 export default (
     <Switch>
-
         <Route component={Home} exact path="/" />
         {/* probably will delete */}
         <Route component={Adopt} exact path="/adopt" />
         <Route component={LocationSearch} exact path="/adopt/location-search" />
         
         <Route component={Catalog} exact path="/adopt/catalog" />
+        <Route component={AdminAdd} exact path="/adopt/adminadd"/>
         <Route component={CatBio} exact path="/adopt/cat_bio/:id" />
+        <Route component={AdminEdit} exact path="/catbio/edit/:id"/>
         <Route component={ApplicationForm} exact path="/adopt/application" />
 
         <Route component={About} exact path="/about" />

@@ -6,7 +6,8 @@ const initialState = {
             age: '6 years',
             gender: 'F'
         }
-    ]
+    ],
+    admin: {}
 }
 
 const SET_CATS_LIST = "SET_CATS_LIST";
@@ -18,9 +19,9 @@ export default function reducer(state=initialState, action) {
         case SET_CATS_LIST:
             return {...state, catsList: action.payload}
         case LOGGED_IN:
-            return {...state, user: action.payload}
+            return {...state, admin: action.payload}
         case LOGGED_OUT:
-            return {...state, user: null};
+            return {...state, admin: null};
         default:
             return {...state}
     }
@@ -33,10 +34,10 @@ export function setCatsList(catsList) {
     } 
 }
 
-export function login(user) {
+export function login(admin) {
     return {
         type: LOGGED_OUT,
-        payload: user
+        payload: admin
     } 
 }
 

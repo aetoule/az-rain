@@ -43,13 +43,13 @@ class Catalog extends Component {
             <div>
                 <img className="couch-cat" src={couchcat}/>
                 <h1 className="adopt-title-text">Adopt a cat</h1>
-                <Header />
                 
                 <h2 className="filter-search">Filter your search</h2>
                 <div className="filter-search-container">
 
                 </div>
                 {mappedList}
+                <Link to= '/adopt/adminadd'><button>Add a Cat</button></Link>
             </div>
          );
     }
