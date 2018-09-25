@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 import hamburgerMenu from '../../media/noun_hamburger menu_549978.svg';
-import whitecatlogo from '../../media/whitecatlogo.svg';
+import whitecatlogo from '../../media/SVG/noArtboardWhiteKittyLogo.svg';
 
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             toggle: false
-         }
+        }
     }
 
     render() { 
@@ -32,11 +32,18 @@ class Header extends Component {
                                     <li className="space"><Link className="space" to= "/adopt/application">{`\u{1f431}`} Cat Adoption Application Form</Link></li>
                                 </ul>
                             </li>
-                            <li className="header-main-list"><Link className="link" to= "/about"> About</Link></li>
-                            <li className="header-main-list">Help RAIN
+
+                            <li className="header-main-list">About
                                 <ul className="dropdown-content2 space">
-                                    <li className="space"><Link className="space" to= "/help_rain/meet_az_rain">{`\u{1f431}`} Meet AZ Rain</Link></li>
-                                    <li className="space"><Link className="space" to= "/help_rain/contact">{`\u{1f431}`} Contact</Link></li>
+                                    <li className="space"><Link className="space" to= "/about/meet_az_rain">{`\u{1f431}`} Meet AZ Rain</Link></li>
+                                    <li className="space"><Link className="space" to= "/about/contact">{`\u{1f431}`} Contact</Link></li>
+                                </ul>
+                            </li>
+
+                            <li className="header-main-list">Help RAIN
+                                <ul className="dropdown-content3 space">
+                                    <li className="space"><Link className="space" to= "/help_rain/donate">{`\u{1f431}`} Donate</Link></li>
+                                    <li className="space"><Link className="space" to= "/help_rain/sponsor_a_pet">{`\u{1f431}`} Sponsor a Pet</Link></li>
                                 </ul>
                             </li>
                         </ul>

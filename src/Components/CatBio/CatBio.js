@@ -11,7 +11,7 @@ class CatBio extends Component {
         super(props);
         this.state = { 
             profile:[]
-         }
+        }
     }
     componentDidMount() {
         axios.get(`/api/cats/${this.props.match.params.id}`).then(res => {

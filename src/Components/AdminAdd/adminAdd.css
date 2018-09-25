@@ -1,0 +1,23 @@
+.admin-cancel-add-btn {
+    height: 2em;
+    width: 8em;
+    background-color: #FF6B6A;
+    border-radius: 0.5em;
+    border-style: none;
+    font-family: 'Muli', sans-serif;
+    font-size: 2em;
+    margin: auto;
+    margin: 1.5em;
+}
+
+.admin-add-confirm-btn {    
+    height: 2em;
+    width: 8em;
+    background-color: #FFE76C;
+    border-radius: 0.5em;
+    border-style: none;
+    font-family: 'Muli', sans-serif;
+    font-size: 2em;
+    margin: auto;
+    margin: 1.5em;
+}

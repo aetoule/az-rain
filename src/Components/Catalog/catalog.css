@@ -42,10 +42,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
+    height: 40vh;
     width: 100vw;
 }
 
-.adopt-title-text {
+.adopt-title-text-catalog {
     position: absolute;
     top: 85px;
     left:0;
@@ -54,6 +56,8 @@
     font-size: 40px;
     font-weight: bold;
     margin: auto;
+    color: #ffffff;
+    /* color: #614B4E; */
 }
 
 .filter-search {
@@ -65,6 +69,63 @@
 
 .filter-search-container {
     background: #D8D8D8;
-
 }
 
+.add-cat-btn {
+    height: 3em;
+    width: 10em;
+    background-color: #FFE76C;
+    border-radius: 0.8em;
+    border-style: none;
+    font-family: 'Muli', sans-serif;
+    font-size: 2em;
+    margin: auto;
+    padding: 1em;
+    margin: 1.5em;
+}
+
+
+/* gender buttons */
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+.stv-radio-buttons-wrapper {
+  clear: both;
+  display: inline-block;
+}
+
+.stv-radio-button {
+  position: absolute;
+  left: -9999em;
+  top: -9999em;
+}
+.stv-radio-button + label {
+  float: left;
+  padding: .5em 1em;
+  cursor: pointer;
+  border: 2px solid #4ECDC5;
+  margin-right: -1px;
+  color: #1B535B;
+  background-color: #ffffff;
+}
+.stv-radio-button + label:first-of-type {
+  border-radius: .7em 0 0 .7em;
+}
+.stv-radio-button + label:last-of-type {
+  border-radius: 0 .7em .7em 0;
+}
+.stv-radio-button:checked + label {
+  background-color: #3277b3;
+}

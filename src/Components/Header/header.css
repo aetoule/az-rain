@@ -2,10 +2,16 @@
     header {
         position: absolute;
         /* justify-content: flex-end; */
-        right: 3em;
+        height: 110px;
+        /* right: 3em; */
         left: 0;
+        right: 0;
+        background: transparent;
         top: 1em;
-        background-color: turquoise;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* background-color: turquoise; */
     }
     
     .menu-button {
@@ -14,11 +20,12 @@
     
     nav {
         list-style-type: none;
-        top: 1em;
-        position: absolute;
-        display: flex;
+        /* top: 1em; */
+        /* position: absolute; */
+        /* display: flex; */
         justify-content: flex-end;
-        right: 0;
+        /* right: 0; */
+        width: 59%;
     }
     
     ul {
@@ -30,17 +37,20 @@
     li {
         font-style: none;
         display: inline-block;
-        padding: 20px;
-        padding: 0 0 0 90px;
+        /* padding: 20px;
+        padding: 0 0 0 90px; */
         font-family: 'Muli', sans-serif;
         font-size: 2.4em;
-        color: white;
+        /* change this back to white to change back the "Adopt" and "Help RAIN" nav links */
+        /* color: #614B4E; */
+        color: #ffffff;
     }
 
     .link {
         text-decoration: none;
         /* padding: 20px; */
-        color: white;
+        /* color: #614B4E; */
+        color: #ffffff;
         font-size: 1em;
     }
     
@@ -49,27 +59,33 @@
         justify-content: flex-start;
         flex-direction: row;
         max-width: 30%;
+        /* left: 2.5em; */
+        /* background-color: pink; */
+        align-items: center;
     }
 
     .white-cat-logo {
-        height: 5em;
-        width: 5em;
-        left: 2.5em;
-        position: absolute;
-        top: 0.3em;
-
+        height: 3.2em;
+        width: 3.2em;
+        /* left: 2.5em; */
+        /* position: absolute; */
+        /* top: 0.3em; */
     }
     .logo {
         /* display: inline-block; */
-        display: flex;
-        font-family: 'muli', sans-serif;
-        position: absolute;
+        /* display: flex; */
+        font-family: 'Natalia Rosaline Sans Demo', sans-serif;
+        /* font-family: 'intro inline', sans-serif; */
+        /* position: absolute; */
         top: 0.3em;
+        left: 0.6em;
+        /* background-color: green; */
     }
     
     .dropdown {
         position: relative;
-        display: inline-block;
+        display: flex;
+        justify-content: space-evenly;
     }
     
     .dropdown-content {
@@ -97,9 +113,22 @@
         z-index: 1;
         transition: 0.35s all;
         text-align: left;
-        }
+    }
+
+    .dropdown-content3 {
+        top: 60%;
+        opacity: 0;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        transition: 0.35s all;
+        text-align: left;
+    }
     
-    .dropdown-content:hover, .dropdown-content2:hover {
+    .dropdown-content:hover, .dropdown-content2:hover, .dropdown-content3:hover {
     opacity: 1;
         top: 50%;
     }
@@ -128,7 +157,7 @@
     }
     
     .logo {
-        position: absolute;
+        /* position: absolute; */
         list-style-type: none;
         display: flex;
     }
@@ -149,7 +178,7 @@
 
     .menu-button {
         display: initial;
-        position: absolute;
+        /* position: absolute; */
         z-index: 9999;
         border-radius: 50%;
         height: 3.33em;

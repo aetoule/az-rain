@@ -6,6 +6,12 @@
     background-size: cover;
     background-repeat: no-repeat;
 } */
+
+.entire-catbio-page-container {
+    background-color: pink;
+    width: 100vw;
+    height: 100vh;
+}
 .header-container {
     width: 100vw;
     height: 20vh;
@@ -27,7 +33,16 @@
 }
 
 .adopt-title-text {
-    color: #ffffff;
+    position: absolute;
+    top: 85px;
+    left:0;
+    right:0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+
+    color: #614B4E;
     font-size: 3em;
     font-family: 'Muli', sans-serif;
 }

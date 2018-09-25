@@ -35,13 +35,14 @@ export function setCatsList(catsList) {
 }
 
 export function login(admin) {
+    console.log(admin);
     return {
-        type: LOGGED_OUT,
+        type: LOGGED_IN,
         payload: admin
     } 
 }
 
-export function logOut() {
+export function logout() {
     return {
         type: LOGGED_OUT
     } 

@@ -21,6 +21,17 @@ class AdminAdd extends Component {
         console.log('fired');
         
     }
+
+    handleCancel = () => {
+        this.setState ({
+            img: '',
+            name: '',
+            age: 0,
+            description:'' 
+        })
+
+        window.location.replace('/adopt/catalog')
+    }
     handleAddCat = (img, name, age, description) => {
         axios.post(`/api/cats`, {img, name, age, description}).then(res => {
             // TODO ADD REDIRECT HERE FFS
@@ -79,7 +90,10 @@ class AdminAdd extends Component {
                     {/* <p className="catbio-cat-description">{description}</p> */}
                     <textarea value={description} onChange={(e) => this.handleChangeDescription(e.target.value)} />
 
-                    <button className="admin-edit-btn"
+                    <button className="admin-cancel-add-btn"
+                    onClick={() => this.handleCancel(img, name, age, description)}>Cancel</button>
+
+                    <button className="admin-add-confirm-btn"
                     onClick={() => this.handleAddCat(img, name, age, description)}>Add</button>
 
                 </div>

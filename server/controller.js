@@ -1,4 +1,21 @@
 module.exports = {
+
+    postAdmin: (req, res) => {
+        const dbInstance = req.app.get('db');
+            dbInstance.create_admin()
+            .then(stuff => res.status(200).send(stuff) )
+            .catch(err => {
+                res.status(500).send({errorMessage: "Error with creating user."}, err);
+            });
+    },
+    postLogin: (req, res) => {
+        const dbInstance = req.app.get('db');
+            dbInstance.create_admin()
+            .then(stuff => res.status(200).send(stuff) )
+            .catch(err => {
+                res.status(500).send({errorMessage: "Error with creating user."}, err);
+            });
+    },
     setCatalog: (req, res) => {
         const dbInstance = req.app.get('db');
         dbInstance.get_catalog()

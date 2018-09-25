@@ -4,13 +4,19 @@ import {setCatsList} from '../../redux/reducer';
 import {connect} from 'react-redux';
 import Header from '../Header/Header';
 import './catalog.css';
-import couchcat from '../../media/copytucker-good-499943-unsplash copy.jpg';
+import couchcat from '../../media/patrick-brinksma-580128-unsplash.jpg';
 import {Link} from 'react-router-dom';
 
 class Catalog extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            gender: '',
+            type: '',
+            breed: '',
+            filteredList: [],
+            filtered: false
+        }
     }
     componentDidMount() {
         axios.get('/api/cats').then(res => {
@@ -20,10 +26,90 @@ class Catalog extends Component {
         }).catch(err => console.log('err', err));  
     }
 
+    handleGender = (value) => {
+        console.log(value);
+        this.setState({
+            gender: value
+        })
+    }
+
+    handleType = (value) => {
+        console.log(value);
+        this.setState({
+            type: value
+        })
+    }
+
+    handleBreed = (value) => {
+        console.log(value);
+        this.setState({
+            breed: value
+        })
+    }
+
+    // filter thru cat list based on whats in state at the time.
+    handleSubmit = () => {
+        let filteredList = this.props.catsList.filter((cat) => {
+            console.log('entered filteredList',this.state)
+            if (this.state.gender !== '' && this.state.type !== '' && this.state.breed !== '') {
+                if (cat.gender == this.state.gender && cat.type == this.state.type && cat.breed == this.state.breed) {
+                    console.log('first if')
+                    return cat
+                }
+            }
+            else if (this.state.gender !== '' && this.state.type !== '') {
+                if (cat.gender == this.state.gender && cat.type == this.state.type) {
+                    console.log('second if')
+                    return cat
+                }
+            } else {
+                if(cat.gender == this.state.gender) {
+                    console.log('third if')
+                    return cat
+                } else if (cat.type == this.state.type) {
+                    console.log('fourth if')
+                    return cat
+                }         
+            } 
+        })
+        console.log(filteredList);
+        
+
+        this.setState({
+            filteredList: filteredList,
+            filtered: true
+        })
+        
+    }
+
+
+    handleReset = () => {
+        this.setState({
+            gender: '',
+            type: '',
+            breed: '',
+            filteredList: [],
+            filtered: false
+        })
+    }
+
     render() { 
         const {catsList} = this.props;
         console.log(catsList);
-        
+        let filterList = this.state.filteredList.map((cat, i) => {
+            return (
+                <Link to ={`/adopt/cat_bio/${cat.id}`}><div className="row">
+                    <div className="mapped-cat-list" key={i}>
+                        <img className="cat-img" src={cat.img}/>
+                        <p className="cat-name">{cat.name}</p> 
+                        <p className="cat-age">{cat.age}</p> 
+                    {/* <button onClick={() => props.deleteHouse(house.id)}>Delete</button> */}
+                    
+                    </div>
+                </div></Link>
+            )
+        })
+
         let mappedList = catsList.map((cat, i) => {
             return (
                 <Link to ={`/adopt/cat_bio/${cat.id}`}><div className="row">
@@ -35,23 +121,66 @@ class Catalog extends Component {
                     
                     </div>
                 </div></Link>
-                )
+            )
             
         })
-        
         return ( 
             <div>
                 <img className="couch-cat" src={couchcat}/>
-                <h1 className="adopt-title-text">Adopt a cat</h1>
+                <h1 className="adopt-title-text-catalog">Adopt a cat</h1>
                 
                 <h2 className="filter-search">Filter your search</h2>
+                {/* filter thru cat list */}
                 <div className="filter-search-container">
-
+                    {/* filter by gender */}
+                    <div className="stv-radio-buttons-wrapper">
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleGender(event.target.value)} name="radioButtonTest" value="F" id="button1" />
+                        <label for="button1">Female</label>
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleGender(event.target.value)}name="radioButtonTest" value="M" id="button2" />
+                        <label for="button2">Male</label>
+                    </div>
+                    {/* filter by type of cat */}
+                    <div className="stv-radio-buttons-wrapper2">
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleType(event.target.value)} name="radioButtonTest" value="Kitten" id="button3" />
+                        <label for="button3">Kitten</label>
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleType(event.target.value)}name="radioButtonTest" value="Cat" id="button4" />
+                        <label for="button4">Cat</label>
+                    </div>
+                    {/* filter by breed */}
+                    <div className="stv-radio-buttons-wrapper3">
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleBreed(event.target.value)} name="radioButtonTest" value="DMH" id="button5" />
+                        <label for="button5">DMH</label>
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleBreed(event.target.value)}name="radioButtonTest" value="DSH" id="button6" />
+                        <label for="button6">DSH</label>
+                        <input type="radio" className="stv-radio-button" 
+                        onClick={(event) => this.handleBreed(event.target.value)} name="radioButtonTest" value="DLH" id="button7" />
+                        <label for="button7">DLH</label>
+                    </div>
+                    
+                    <button className="submit-filter-btn"
+                    onClick={this.handleSubmit}>Submit</button>
+                    <button className="submit-filter-btn"
+                    onClick={this.handleReset}>Reset</button>
                 </div>
-                {mappedList}
-                <Link to= '/adopt/adminadd'><button>Add a Cat</button></Link>
+                {
+                    this.state.filtered 
+                    ?
+                    filterList
+                    :
+                    mappedList
+                }
+
+                <br></br>
+                <Link to= '/adopt/adminadd'><button className="add-cat-btn">Add a Cat</button></Link>
+                
             </div>
-         );
+        );
     }
 }
 
