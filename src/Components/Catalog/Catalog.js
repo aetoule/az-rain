@@ -4,8 +4,10 @@ import {setCatsList} from '../../redux/reducer';
 import {connect} from 'react-redux';
 import Header from '../Header/Header';
 import './catalog.css';
-import couchcat from '../../media/patrick-brinksma-580128-unsplash.jpg';
+import headercat from '../../media/patrick-brinksma-580128-unsplash.jpg';
+import filterIcon from '../../media/noun_filters_1245150.svg'
 import {Link} from 'react-router-dom';
+
 
 class Catalog extends Component {
     constructor(props) {
@@ -78,10 +80,8 @@ class Catalog extends Component {
         this.setState({
             filteredList: filteredList,
             filtered: true
-        })
-        
+        })    
     }
-
 
     handleReset = () => {
         this.setState({
@@ -126,47 +126,53 @@ class Catalog extends Component {
         })
         return ( 
             <div>
-                <img className="couch-cat" src={couchcat}/>
+                <img className="header-background-img-cat" src={headercat}/>
                 <h1 className="adopt-title-text-catalog">Adopt a cat</h1>
-                
-                <h2 className="filter-search">Filter your search</h2>
+                   
                 {/* filter thru cat list */}
-                <div className="filter-search-container">
-                    {/* filter by gender */}
-                    <div className="stv-radio-buttons-wrapper">
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleGender(event.target.value)} name="radioButtonTest" value="F" id="button1" />
-                        <label for="button1">Female</label>
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleGender(event.target.value)}name="radioButtonTest" value="M" id="button2" />
-                        <label for="button2">Male</label>
+                <div className="filter-container">
+                    <div className="filter-text-and-icon-container">
+                        <img className="filter-icon" src={filterIcon}></img>
+                        <h2 className="filter-search-text">Filter your search</h2>
                     </div>
-                    {/* filter by type of cat */}
-                    <div className="stv-radio-buttons-wrapper2">
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleType(event.target.value)} name="radioButtonTest" value="Kitten" id="button3" />
-                        <label for="button3">Kitten</label>
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleType(event.target.value)}name="radioButtonTest" value="Cat" id="button4" />
-                        <label for="button4">Cat</label>
+                    <div className="three-filter-container">
+                        {/* filter by gender */}
+                        <div className="stv-radio-buttons-wrapper">
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleGender(event.target.value)} name="radioButtonTest" value="F" id="button1" />
+                            <label for="button1">Female</label>
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleGender(event.target.value)}name="radioButtonTest" value="M" id="button2" />
+                            <label for="button2">Male</label>
+                        </div>
+                        {/* filter by type of cat */}
+                        <div className="stv-radio-buttons-wrapper2">
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleType(event.target.value)} name="radioButtonTest" value="Kitten" id="button3" />
+                            <label for="button3">Kitten</label>
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleType(event.target.value)}name="radioButtonTest" value="Cat" id="button4" />
+                            <label for="button4">Cat</label>
+                        </div>
+                        {/* filter by breed */}
+                        <div className="stv-radio-buttons-wrapper3">
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleBreed(event.target.value)} name="radioButtonTest" value="DMH" id="button5" />
+                            <label for="button5">DMH</label>
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleBreed(event.target.value)}name="radioButtonTest" value="DSH" id="button6" />
+                            <label for="button6">DSH</label>
+                            <input type="radio" className="stv-radio-button" 
+                            onClick={(event) => this.handleBreed(event.target.value)} name="radioButtonTest" value="DLH" id="button7" />
+                            <label for="button7">DLH</label>
+                        </div>
                     </div>
-                    {/* filter by breed */}
-                    <div className="stv-radio-buttons-wrapper3">
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleBreed(event.target.value)} name="radioButtonTest" value="DMH" id="button5" />
-                        <label for="button5">DMH</label>
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleBreed(event.target.value)}name="radioButtonTest" value="DSH" id="button6" />
-                        <label for="button6">DSH</label>
-                        <input type="radio" className="stv-radio-button" 
-                        onClick={(event) => this.handleBreed(event.target.value)} name="radioButtonTest" value="DLH" id="button7" />
-                        <label for="button7">DLH</label>
+                    <div className="reset-and-submit-buttons">
+                        <button className="reset-filter-btn"
+                        onClick={this.handleReset}>Reset</button>
+                        <button className="submit-filter-btn"
+                        onClick={this.handleSubmit}>Submit</button>
                     </div>
-                    
-                    <button className="submit-filter-btn"
-                    onClick={this.handleSubmit}>Submit</button>
-                    <button className="submit-filter-btn"
-                    onClick={this.handleReset}>Reset</button>
                 </div>
                 {
                     this.state.filtered 

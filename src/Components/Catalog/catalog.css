@@ -1,3 +1,12 @@
+.header-background-img-cat {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 30vh;
+    width: 100vw;
+}
+
 .row {
     display: inline-block;
     flex-wrap: wrap;
@@ -38,37 +47,69 @@
     padding: 0px 0px 0px 0px;
 }
 
-.couch-cat {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    height: 40vh;
-    width: 100vw;
-}
-
 .adopt-title-text-catalog {
     position: absolute;
-    top: 85px;
+    top: 100px;
     left:0;
     right:0;
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: bold;
     margin: auto;
     color: #ffffff;
     /* color: #614B4E; */
 }
 
-.filter-search {
-    color: #1B535B;
-    font-size: 1.5em;
-    font-family: 'Muli', sans-serif;
-
+.filter-container {
+    display: flex;
+    background: #D8D8D8;
+    border-radius: 10px;
+    opacity: 0.85;
+    min-width: 500px;
+    max-width: 1000px;
+    margin: auto;
+    flex-direction: column;
 }
 
-.filter-search-container {
-    background: #D8D8D8;
+.filter-text-and-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.filter-search-text {
+    color: #1B535B;
+    font-size: 2em;
+    font-family: 'Muli', sans-serif;
+}
+
+.three-filter-container {
+    /* background: pink; */
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-and-submit-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.reset-filter-btn {
+    background-color: #FFE76C;
+}
+
+.submit-filter-btn {
+    background-color: #FF6B6A;
 }
 
 .add-cat-btn {
@@ -103,7 +144,7 @@ body {
 
 .stv-radio-buttons-wrapper {
   clear: both;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .stv-radio-button {
@@ -112,7 +153,7 @@ body {
   top: -9999em;
 }
 .stv-radio-button + label {
-  float: left;
+  /* float: left; */
   padding: .5em 1em;
   cursor: pointer;
   border: 2px solid #4ECDC5;
