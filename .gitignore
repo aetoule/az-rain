@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/server/config
 
 # testing
 /coverage
@@ -20,4 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/server/config.js
