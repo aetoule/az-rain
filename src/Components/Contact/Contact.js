@@ -10,7 +10,7 @@ export class Contact extends Component {
             name: '',
             email: '',
             message: ''
-         }
+        }
     }
 
     handleNameInput = (value) => {

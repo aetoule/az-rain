@@ -15,7 +15,11 @@
 .header-container {
     width: 100vw;
     height: 20vh;
-    background-color: #E4DDDE;
+    background-image: url("../../media//patrick-brinksma-580128-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
 
 .catbio-cat-img {
@@ -33,7 +37,6 @@
 }
 
 .adopt-title-text {
-    position: absolute;
     top: 85px;
     left:0;
     right:0;
@@ -42,7 +45,7 @@
     font-weight: bold;
     margin: auto;
 
-    color: #614B4E;
+    color: #ffffff;
     font-size: 3em;
     font-family: 'Muli', sans-serif;
 }

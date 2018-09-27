@@ -37,6 +37,7 @@ class Header extends Component {
                                 <ul className="dropdown-content2 space">
                                     <li className="space"><Link className="space" to= "/about/meet_az_rain">{`\u{1f431}`} Meet AZ Rain</Link></li>
                                     <li className="space"><Link className="space" to= "/about/contact">{`\u{1f431}`} Contact</Link></li>
+                                    <li className="space"><Link className="space" to= "/about/testimonials">{`\u{1f431}`} Testimonials</Link></li>
                                 </ul>
                             </li>
 

@@ -117,12 +117,10 @@ class Catalog extends Component {
                         <img className="cat-img" src={cat.img}/>
                         <p className="cat-name">{cat.name}</p> 
                         <p className="cat-age">{cat.age}</p> 
-                    {/* <button onClick={() => props.deleteHouse(house.id)}>Delete</button> */}
-                    
+                    {/* <button onClick={() => props.deleteHouse(house.id)}>Delete</button> */}                   
                     </div>
                 </div></Link>
             )
-            
         })
         return ( 
             <div>

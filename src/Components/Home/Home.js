@@ -14,7 +14,13 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
+        
     }
+
+    componentDidMount(){
+        window.scroll(0,0);
+    }
+    
     render() { 
         // const {login} = this.props;
         return ( 

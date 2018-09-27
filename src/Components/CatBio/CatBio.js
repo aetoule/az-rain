@@ -39,8 +39,8 @@ class CatBio extends Component {
             <div className="entire-catbio-page-container">
                 {/* <div className="couch-cat"> */}
                 <div className="header-container">
-                    <h1 className="adopt-title-text">Adopt a cat</h1>
                 </div>
+                <h1 className="adopt-title-text">Adopt a cat</h1>
                 <img className="catbio-cat-img" src={profile.img}/>
                 <div className="text-area"> 
                     <h1 className="catbio-cat-name">{profile.name}</h1>
