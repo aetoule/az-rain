@@ -26,12 +26,13 @@ class Header extends Component {
                     <nav className={this.state.toggle ? 'show' : ''}>
                         
                         <ul className="dropdown">
-                            <li className="header-main-list">Adopt
-                                <ul className="dropdown-content space">
+                            <li className="header-main-list"><Link to= "/adopt/catalog">Adopt</Link>
+                                {/* <ul className="dropdown-content space">
                                     <li className="space"><Link className="space" to= "/adopt/catalog">{`\u{1f431}`} Cats / Kittens</Link></li>
                                     <li className="space"><Link className="space" to= "/adopt/application">{`\u{1f431}`} Cat Adoption Application Form</Link></li>
-                                </ul>
+                                </ul> */}
                             </li>
+
 
                             <li className="header-main-list">About
                                 <ul className="dropdown-content2 space">

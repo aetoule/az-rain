@@ -175,7 +175,11 @@ class Catalog extends Component {
                 {
                     this.state.filtered 
                     ?
+                    filterList.length !== 0 
+                    ?
                     filterList
+                    :
+                    <h2 className="">No kitties found</h2>
                     :
                     mappedList
                 }

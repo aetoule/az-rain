@@ -146,6 +146,20 @@
     .header-main-list {
         font-size: 2em;
     }
+    /* styling for the Adopt non dropdown list header item */
+    a {
+        font-style: none;
+        display: inline-block;
+        /* padding: 20px;
+        padding: 0 0 0 90px; */
+        font-family: 'Muli', sans-serif;
+        /* font-size: 2.4em; */
+        /* change this back to white to change back the "Adopt" and "Help RAIN" nav links */
+        /* color: #614B4E; */
+        color: #ffffff; 
+        text-decoration: none;
+
+    }
 }
 
 @media (max-width: 768px) {
