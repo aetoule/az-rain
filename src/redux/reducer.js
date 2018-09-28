@@ -1,11 +1,11 @@
 const initialState = {
     cat: {},
     catsList: [
-        {
-            name: 'bailey',
-            age: '6 years',
-            gender: 'F'
-        }
+        // {
+        //     name: 'bailey',
+        //     age: '6 years',
+        //     gender: 'F'
+        // }
     ],
     admin: {}
 }

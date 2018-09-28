@@ -15,12 +15,10 @@ class CatBio extends Component {
     }
     componentDidMount() {
         axios.get(`/api/cats/${this.props.match.params.id}`).then(res => {
-            console.log(res);
-            
+            console.log(res); 
             this.setState({
                 profile: (res.data[0])
-            }
-                
+            }     
         )
         }).catch(err => console.log('err', err));  
     }
@@ -43,8 +41,13 @@ class CatBio extends Component {
                 <h1 className="adopt-title-text">Adopt a cat</h1>
                 <img className="catbio-cat-img" src={profile.img}/>
                 <div className="text-area"> 
-                    <h1 className="catbio-cat-name">{profile.name}</h1>
-                    <h2 className="catbio-cat-age">{profile.age}</h2>
+                    <h2 className="catbio-cat-name">{profile.name}</h2>
+                    <h3 className="catbio-cat-age">{profile.age}</h3>
+                    <h4 className="catbio-cat-gender">{profile.gender}</h4>
+                    <h4 className="catbio-cat-breed">{profile.breed}</h4>
+                    <h4 className="catbio-cat-type">{profile.type}</h4>
+                    <h4 className="catbio-cat-color">{profile.color}</h4>
+
                     <p className="catbio-cat-description">{profile.description}</p>
                 </div>
 

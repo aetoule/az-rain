@@ -1,6 +1,6 @@
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import React, { Component } from 'react';
-import './contact.css';
+// import './contact.css';
 import axios from 'axios';
 
 export class Contact extends Component {
@@ -38,7 +38,7 @@ export class Contact extends Component {
         const message = document.getElementById('message').value;
         axios({
             method: "POST", 
-            url:"http://localhost:3000/send", 
+            url:"http://localhost:3001/send", 
             data: {
                 name: name,   
                 email: email,  
@@ -76,7 +76,7 @@ export class Contact extends Component {
                 <input id="email" type="text" value={email} onChange={(e) => this.handleEmailInput(e.target.value)} />
                 <h2>Message</h2>
                 <input id="message" type="text" value={message} onChange={(e) => this.handleMessageInput(e.target.value)} />
-                <button onClick={(e) => this.handleSubmit(e)}>Submit</button>
+                <button className="contact-submit-btn" onClick={(e) => this.handleSubmit(e)}>Submit</button>
             </form>
             <div className="outside-map-container">
                 <div className="map-container">

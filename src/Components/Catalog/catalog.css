@@ -7,7 +7,9 @@
   height: 20vh;
   width: 100vw; }
 
-.row {
+a {
+  padding: 0 4px;
+  flex: 33%;
   display: inline-block;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -19,8 +21,7 @@
   padding: 0 4px; }
 
 .cat-img {
-  height: 30em;
-  width: 30em;
+  width: 100%;
   border-radius: 10px;
   object-fit: cover;
   margin-top: 8px;

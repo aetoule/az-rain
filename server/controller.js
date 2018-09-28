@@ -39,8 +39,8 @@ module.exports = {
 
     addCat: (req, res) => {
         const dbInstance = req.app.get('db');
-        let {img, name, age, description} = req.body;
-        dbInstance.add_cat([img, name, age, description])
+        let {img, name, gender, age, breed, type, color, description} = req.body;
+        dbInstance.add_cat([img, name, gender, age, breed, type, color, description])
         .then(stuff => {
             res.status(200).send(stuff)})
         
@@ -54,7 +54,7 @@ module.exports = {
         let {id} = req.params;
         let {img, name, age, description} = req.body;
         // console.log(req.body);
-        dbInstance.update_cat([id, img, name, age, description])
+        dbInstance.update_cat([id, img, name, gender, age, breed, type, color, description])
         .then(stuff => {
             res.status(200)})
         .catch(err => {

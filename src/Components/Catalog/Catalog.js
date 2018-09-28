@@ -31,7 +31,7 @@ class Catalog extends Component {
     handleGender = (value) => {
         console.log(value);
         this.setState({
-            gender: value
+            gender: value    
         })
     }
 
@@ -74,13 +74,37 @@ class Catalog extends Component {
                 }         
             } 
         })
-        console.log(filteredList);
-        
 
+
+        // let filteredList = this.props.catsList.filter((cat) => {
+        //     console.log('entered filteredList',this.state)
+        //     switch(cat) {
+        //         case cat.gender == this.state.gender && cat.type == this.state.type && cat.breed == this.state.breed:
+        //             console.log('first if')
+        //             return {cat}
+        //         case cat.gender == this.state.gender && cat.type == this.state.type:
+        //         console.log('second if')
+        //             return {cat}
+        //         case cat.gender == this.state.gender:
+        //         console.log('third if')
+        //             return {cat}
+        //         case cat.type == this.state.type:
+        //         console.log('fourth if')
+        //             return {cat}
+        //         case cat.breed == this.state.breed:
+        //         console.log('fourth if')
+        //                 return {cat}
+        //         default:
+        //         console.log("no kitties")
+        //     }                
+        // })
+        console.log(filteredList);
+    
         this.setState({
             filteredList: filteredList,
             filtered: true
         })    
+        // return this.handleReset;
     }
 
     handleReset = () => {
@@ -94,6 +118,7 @@ class Catalog extends Component {
     }
 
     render() { 
+        console.log(this.state);
         const {catsList} = this.props;
         console.log(catsList);
         let filterList = this.state.filteredList.map((cat, i) => {
@@ -112,14 +137,14 @@ class Catalog extends Component {
 
         let mappedList = catsList.map((cat, i) => {
             return (
-                <Link to ={`/adopt/cat_bio/${cat.id}`}><div className="row">
+                <Link to ={`/adopt/cat_bio/${cat.id}`}>
                     <div className="mapped-cat-list" key={i}>
                         <img className="cat-img" src={cat.img}/>
                         <p className="cat-name">{cat.name}</p> 
                         <p className="cat-age">{cat.age}</p> 
                     {/* <button onClick={() => props.deleteHouse(house.id)}>Delete</button> */}                   
                     </div>
-                </div></Link>
+               </Link>
             )
         })
         return ( 
@@ -172,18 +197,19 @@ class Catalog extends Component {
                         onClick={this.handleSubmit}>Submit</button>
                     </div>
                 </div>
+                <div>
                 {
                     this.state.filtered 
                     ?
-                    filterList.length !== 0 
-                    ?
-                    filterList
-                    :
-                    <h2 className="">No kitties found</h2>
+                        filterList.length !== 0 
+                        ?
+                        filterList
+                        :
+                        <h2 className="">No kitties found</h2>
                     :
                     mappedList
                 }
-
+                </div>
                 <br></br>
                 <Link to= '/adopt/adminadd'><button className="add-cat-btn">Add a Cat</button></Link>
                 

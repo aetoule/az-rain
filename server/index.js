@@ -130,6 +130,7 @@ app.post('/api/logout', (req, res) => {
   res.send('session destroyed');
 })
 
+
 // Nodemailer
 app.post('/send', (req, res, next) => {
   console.log(req.body);

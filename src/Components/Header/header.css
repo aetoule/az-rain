@@ -135,16 +135,17 @@
     
     .space {
         padding: 5px 0px;
-        max-width: 200px;
-        font-size: 1em;
+        max-width: 150px;
+        font-size: 1rem;
         color: #1B535B;
         text-decoration: none;
-        margin: 20px 0;
-        text-align: center;
+        margin: 8px 0;
+        text-align: left;
+        padding: 0 4px;
     }
 
     .header-main-list {
-        font-size: 2em;
+        font-size: 1.33rem;
     }
     /* styling for the Adopt non dropdown list header item */
     a {
@@ -158,6 +159,7 @@
         /* color: #614B4E; */
         color: #ffffff; 
         text-decoration: none;
+        font-size: 1.33rem;
 
     }
 }
