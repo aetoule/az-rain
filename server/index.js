@@ -10,6 +10,8 @@ const creds = require('./config.js');
 
 // var Instafeed = require("instafeed.js");
 const app = express();
+app.use( express.static( `${__dirname}/../build` ) );
+
 app.use(bodyParser.json());
 // heroku db: protected-hamlet-69558
 
@@ -23,6 +25,7 @@ app.use(session({
   //   maxAge: 1000 * 60 * 60 * 24 * 365
   // }
 }));
+
 
 massive(process.env.CONNECTION_STRING).then(database => {
     app.set('db', database);
@@ -160,6 +163,11 @@ app.post('/send', (req, res, next) => {
       })
     }
   })
+})
+
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
 })
 
 const PORT = 5432;
