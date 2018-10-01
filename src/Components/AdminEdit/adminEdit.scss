@@ -1,15 +1,60 @@
+@import '../../layout';
 @import '../../App.scss';
-
+@import '../../assets';
 
 .adminEdit-cat-img{
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
     background-position: center;
-    width: 50%; 
+    width: 55%; 
     height: 50vh;
     border-radius: 1em;
+    margin-bottom: 15px;
+}
+
+.adminEdit-text-area-container {
+    background-color: $lightpink;
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    border-radius: 10px;
+    margin: 0 auto;
+    // padding-bottom: 20px;
 }
 .adminEdit-text-area {
     text-align: left;
+    // width: 51%;
+    margin-top: 1%;
+    margin-left: 40px;
+    // padding: 0 0 0 50px;
+
 }
+
+.adminEdit-input-box{
+    background-color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 500px;
+    border-style: none;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+.adminEdit-description-input-box{
+    @extend .adminEdit-input-box;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.admin-cancel-btn {
+    @include smallAdminButton;
+    background-color: $lightred;
+}
+.admin-edit-btn {
+    @include smallAdminButton;
+    margin: 10px 10px;
+}
+

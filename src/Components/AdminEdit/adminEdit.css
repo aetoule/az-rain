@@ -6,7 +6,8 @@
 
 h1 {
   font-size: 3rem;
-  color: #1B535B; }
+  color: #1B535B;
+  text-align: center; }
 
 .home-page-header {
   font-size: 3em; }
@@ -15,18 +16,79 @@ h2 {
   font-size: 1.5rem;
   text-align: left; }
 
+h3 {
+  text-align: left;
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 14px; }
+
+h5 {
+  font-size: 4rem;
+  text-align: left;
+  margin: 0; }
+
 p {
   color: #1B535B;
-  font-size: 17px; }
+  font-size: 17px;
+  text-align: left; }
 
 .adminEdit-cat-img {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
   background-position: center;
-  width: 50%;
+  width: 55%;
   height: 50vh;
-  border-radius: 1em; }
+  border-radius: 1em;
+  margin-bottom: 15px; }
+
+.adminEdit-text-area-container {
+  background-color: #E4DDDE;
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  border-radius: 10px;
+  margin: 0 auto; }
 
 .adminEdit-text-area {
-  text-align: left; }
+  text-align: left;
+  margin-top: 1%;
+  margin-left: 40px; }
+
+.adminEdit-input-box, .adminEdit-description-input-box {
+  background-color: white;
+  border-radius: 5px;
+  height: 30px;
+  width: 500px;
+  border-style: none;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+  vertical-align: top; }
+
+.adminEdit-description-input-box {
+  height: 200px;
+  margin-bottom: 20px; }
+
+.admin-cancel-btn {
+  height: 32px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 20px;
+  color: white;
+  border-style: none;
+  background-color: #FF6B6B; }
+
+.admin-edit-btn {
+  height: 32px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 20px;
+  color: white;
+  border-style: none;
+  margin: 10px 10px; }

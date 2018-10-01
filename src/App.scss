@@ -21,6 +21,7 @@ $fontfamily: 'Muli', sans-serif;
 h1 {
   font-size: 3rem;
   color: $darkBlue;
+  text-align: center;
 }
 
 .home-page-header {
@@ -32,9 +33,24 @@ h2 {
   text-align: left;
 }
 
+h3 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 4rem;
+  text-align: left;
+  margin: 0;
+}
+
 p {
   color: $darkBlue;
   font-size: 17px;
+  text-align: left;
 }
 
 

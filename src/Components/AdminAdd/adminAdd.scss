@@ -1,0 +1,14 @@
+@import '../../layout';
+@import '../../App.scss';
+@import '../../assets';
+
+.admin-cancel-add-btn {
+    @include smallAdminButton;
+    background-color: $lightred;
+}
+
+.admin-add-confirm-btn {    
+    @include smallAdminButton;
+    background-color: $lightyellow;
+
+}

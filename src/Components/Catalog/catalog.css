@@ -7,7 +7,8 @@
 
 h1 {
   font-size: 3rem;
-  color: #1B535B; }
+  color: #1B535B;
+  text-align: center; }
 
 .home-page-header {
   font-size: 3em; }
@@ -16,9 +17,22 @@ h2 {
   font-size: 1.5rem;
   text-align: left; }
 
+h3 {
+  text-align: left;
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 14px; }
+
+h5 {
+  font-size: 4rem;
+  text-align: left;
+  margin: 0; }
+
 p {
   color: #1B535B;
-  font-size: 17px; }
+  font-size: 17px;
+  text-align: left; }
 
 .header-background-img-cat {
   background-position: center;
@@ -153,18 +167,6 @@ a {
   border-style: none;
   background-color: #FF6B6B; }
 
-.add-cat-btn {
-  height: 3em;
-  width: 10em;
-  background-color: #FFE76C;
-  border-radius: 0.8em;
-  border-style: none;
-  font-family: 'Muli', sans-serif;
-  font-size: 2em;
-  margin: auto;
-  padding: 1em;
-  margin: 1.5em; }
-
 /* gender buttons */
 html {
   box-sizing: border-box; }
@@ -204,3 +206,15 @@ body {
 .stv-radio-button:checked + label {
   background-color: #4ECDC4;
   color: white; }
+
+.add-cat-btn {
+  height: 32px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 20px;
+  color: white;
+  border-style: none;
+  background-color: #FFE76C;
+  margin: 50px 0; }

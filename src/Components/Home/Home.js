@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 import firstCatImage from '../../media/james-sutton-705775-unsplash.jpg';
 import secondCatImage from '../../media/eric-han-455080-unsplash.jpg';
 import thirdCatImage from '../../media/archie1.jpg';
-import { Link, withRouter } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 class Home extends Component {
@@ -34,7 +34,7 @@ class Home extends Component {
                         </h1>
                         <h1 className="left-side12">best friend
                         </h1>   
-                        <Link to='/adopt'><button className="left-side1-btn">Find a cat</button></Link>  
+                        <Link to='/adopt/catalog'><button className="left-side1-btn">Find a cat</button></Link>  
                     </div>
                     
                 </div>

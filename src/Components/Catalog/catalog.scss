@@ -135,17 +135,17 @@ a {
     background-color: $lightred; 
 }
 
-.add-cat-btn {
-  height: 3em;
-  width: 10em;
-  background-color: $lightyellow;
-  border-radius: 0.8em;
-  border-style: none;
-  font-family: 'Muli', sans-serif;
-  font-size: 2em;
-  margin: auto;
-  padding: 1em;
-  margin: 1.5em; }
+// .add-cat-btn {
+//   height: 3em;
+//   width: 10em;
+//   background-color: $lightyellow;
+//   border-radius: 0.8em;
+//   border-style: none;
+//   font-family: 'Muli', sans-serif;
+//   font-size: 2em;
+//   margin: auto;
+//   padding: 1em;
+//   margin: 1.5em; }
 
 /* gender buttons */
 html {
@@ -197,3 +197,10 @@ body {
 .stv-radio-button:checked + label {
   background-color: $turquoise;
   color: white; }
+
+.add-cat-btn {
+  @include smallAdminButton;
+  background-color: $lightyellow;
+  margin: 50px 0;
+
+}

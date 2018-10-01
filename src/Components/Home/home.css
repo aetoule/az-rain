@@ -136,7 +136,7 @@ p {
     font-family: 'Muli', sans-serif;
     font-size: 2.66em;
     color: white;
-    text-align: right;
+    /* text-align: right; */
     left: 1em;
 }
 

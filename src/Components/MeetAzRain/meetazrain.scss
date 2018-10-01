@@ -1,0 +1,88 @@
+@import '../../layout';
+@import '../../App.scss';
+@import '../../assets';
+
+
+.meetazrain-under-header-content {
+    padding: 0 100px;
+}
+.space-between-header-and-content{
+    height: 70px;
+
+}
+
+.meet-az-rain-subtext {
+    color: $turquoise;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1px;
+}
+
+.meet-wayne {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .wayne-img {
+        background-image: url('../../media/parker-whitson-467822-unsplash.jpg');
+        border-radius: 50%;
+        height: 370px;
+        width: 370px;
+        background-position: 20% 20%;
+        background-repeat:no-repeat; 
+
+  background-size: cover;
+  object-fit: cover;
+//   background-position: center;
+//   width: 100%;
+//   height: 50vh;
+//   border-radius: 1em;
+    }
+    .wayne-text-details {
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        margin-left: 80px;
+    }
+}
+
+.space-between-sections{
+    height: 100px;
+}
+
+h5 {
+    padding-bottom: 10px;
+}
+
+.azrain-goals {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+
+    .goals-left-section-container{
+        display: flex;
+        justify-content: center;    
+        max-width: 370px;
+
+        .goal-bullets{
+            padding: 5px 0;
+        }
+    }
+    .goals-right-section {
+        background-color: $lightpink;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 450px;
+        margin-left: 80px;
+        margin-bottom: 30px;
+
+        .goals-mission-text{
+            color: $darkPink;
+            padding: 0 25px;
+        }
+    }
+}
+
+
+

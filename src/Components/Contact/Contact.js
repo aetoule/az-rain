@@ -74,9 +74,17 @@ export class Contact extends Component {
 
     render() {
     const style = {
-        height: '40vh',
+        height: '50vh',
         width: '50vw',
-        top: '50%'
+        // top: '40%',
+
+        // z-index: 3;
+        position: 'absolute',
+        padding: '0px',
+        // border-width: '0px',
+        margin: '40px',
+        left: '0px',
+        top: '-150px',
     } 
     const {name, email, message} = this.state;
 
@@ -90,14 +98,14 @@ export class Contact extends Component {
                     <form id="contact-form">
                         <h2>Contact Form</h2>
                         <h2>Name</h2>
-                        <input id="name" type="text" value={name} placeholder="Fluffy Smith" onChange={(e) => this.handleNameInput(e.target.value)} />
+                        <input id="name" type="text" value={name} placeholder="Hairy Potter" onChange={(e) => this.handleNameInput(e.target.value)} />
                         <h2>Email</h2>
                         <input id="email" type="text" value={email} placeholder="fluffy@gmail.com" onChange={(e) => this.handleEmailInput(e.target.value)} />
                         <h2>Message</h2>
                         <input id="message" type="text" value={message}
                         placeholder="Hi, my name is Fluffy and I am looking to adopt a cat." onChange={(e) => this.handleMessageInput(e.target.value)} />
-                        <button className="contact-submit-btn" onClick={(e) => this.handleSubmit(e)}>Submit</button>
                     </form>
+                    <button className="contact-submit-btn" onClick={(e) => this.handleSubmit(e)}>Send Message</button>
                 </div>
                 <div className="contact-right-column">
                     <h2>How to reach us</h2>
@@ -112,18 +120,20 @@ export class Contact extends Component {
                         </div>
                         <div className="contact-icon-and-text">
                         <img className="contact-icons" src={mailboxIcon}></img>
-                            <p className="contact-text">PO Box 2006</p>
-                            <br></br>
-                            <p className="contact-text">Chandler, AZ. 85224</p>
+                            <ul>
+                                <p className="contact-text">PO Box 2006</p>
+                                
+                                <p className="contact-text">Chandler, AZ. 85224</p>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            {/* <h2 className="google-maps-title-text">Find us here</h2> */}
 
             <div className="outside-map-container">
 
                 <div className="map-container">
-
                     <Map google={this.props.google} zoom={14}
                     initialCenter={{
                         lat: 33.307911,

@@ -54,7 +54,7 @@ module.exports = {
         let {id} = req.params;
         let {img, name, age, gender, type, color, breed, description} = req.body;
         // console.log(req.body);
-        dbInstance.update_cat([img, name, age, gender, type, color, breed, description])
+        dbInstance.update_cat([id, img, name, age, gender, type, color, breed, description])
         .then(stuff => {
             res.status(200)})
         .catch(err => {

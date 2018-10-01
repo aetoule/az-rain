@@ -22,8 +22,7 @@ class AdminAdd extends Component {
         }
     }
     componentDidMount() {
-        console.log('fired');
-        
+        console.log('fired');        
     }
 
     handleCancel = () => {
