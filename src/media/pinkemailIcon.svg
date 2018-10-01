@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="396px" height="396px" viewBox="0 0 396 396" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Email-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <circle id="Oval" fill="#614B4E" cx="198" cy="198" r="198"></circle>
+            <g id="noun_Email_1953145" transform="translate(58.000000, 98.000000)" fill="#E4DDDE">
+                <path d="M260,0 L20,0 C8.954305,0 0,8.954305 0,20 L0,180 C0,191.045695 8.954305,200 20,200 L260,200 C271.045695,200 280,191.045695 280,180 L280,20 C280,8.954305 271.045695,0 260,0 Z M20,40 L85.7,90.6 L20,163.9 L20,40 Z M140,107.1 L26.4,20 L253.6,20 L140,107.1 Z M101.6,102.8 L133.9,127.6 C137.495659,130.367981 142.504341,130.367981 146.1,127.6 L178.4,102.8 L247.5,180 L32.5,180 L101.6,102.8 Z M194.3,90.6 L260,40 L260,164 L194.3,90.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

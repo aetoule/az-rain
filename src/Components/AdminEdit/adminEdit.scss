@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+
+.adminEdit-cat-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    width: 50%; 
+    height: 50vh;
+    border-radius: 1em;
+}
+.adminEdit-text-area {
+    text-align: left;
+}

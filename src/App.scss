@@ -2,10 +2,7 @@
   text-align: center;
   font-size: 12px;
   line-height: 1.2;
-}
-
-.App-intro {
-  font-size: large;
+  font-family: 'Muli', sans-serif;
 }
 
 // Colors
@@ -13,12 +10,31 @@ $darkBlue: #1B535B;
 $darkPink: #614B4E;
 $lightpink: #E4DDDE;
 $turquoise: #4ECDC4;
-$lightyellow: #FFE66D;
+$lightyellow: #FFE76C;
 $lightred: #FF6B6B;
 $white: #ffffff;
+$lightgray: #EBEBEB;
 
-// font sizing
+// font related
+$fontfamily: 'Muli', sans-serif;
+
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  color: $darkBlue;
 }
+
+.home-page-header {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+p {
+  color: $darkBlue;
+  font-size: 17px;
+}
+
 

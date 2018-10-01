@@ -150,7 +150,7 @@
     /* styling for the Adopt non dropdown list header item */
     a {
         font-style: none;
-        display: inline-block;
+        /* display: inline-block; */
         /* padding: 20px;
         padding: 0 0 0 90px; */
         font-family: 'Muli', sans-serif;

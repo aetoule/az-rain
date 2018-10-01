@@ -1,9 +1,32 @@
-.admin-edit-btn {
-    height: 2em;
-    width: 3em;
-    background-color: pink;
-}
+* {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+  font-family: 'Muli', sans-serif; }
 
-.entire-adminEdit-page-container {
-    background-color: blue;
-}
+h1 {
+  font-size: 3rem;
+  color: #1B535B; }
+
+.home-page-header {
+  font-size: 3em; }
+
+h2 {
+  font-size: 1.5rem;
+  text-align: left; }
+
+p {
+  color: #1B535B;
+  font-size: 17px; }
+
+.adminEdit-cat-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  width: 50%;
+  height: 50vh;
+  border-radius: 1em; }
+
+.adminEdit-text-area {
+  text-align: left; }

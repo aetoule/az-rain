@@ -1,0 +1,96 @@
+@import '../../layout';
+@import '../../App.scss';
+@import '../../assets';
+
+.header-container {
+    @include headerWithImgBackground;
+}
+
+
+.contact-left-and-right-container{
+    width: 100%;
+    min-height: 100vh;
+    .contact-left-column {
+        position: relative;
+        float: left;
+        width: 55%;
+        margin-top: 1%;
+        padding: 0 20px;
+        height: 300px;
+        // background-color: yellow;
+    }
+    .contact-right-column{
+        float: right;
+        height: 300px;
+        margin-top: 1%;
+        position: relative;
+        width: 37%;
+        // background-color: green;
+    }
+}
+
+#contact-form {
+    background-color: $lightpink;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 20px;
+    ::-webkit-input-placeholder { 
+        text-align:left;
+        font-size: 16px;
+        }
+    // input:focus::-webkit-input-value {
+    // }
+
+    #name {
+        background-color: white;
+        border-radius: 5px;
+        height: 30px;
+        width: 600px;
+        border-style: none;
+        text-align: left;
+        padding-left: 10px;
+        font-size: 16px;
+        vertical-align: top;
+    }
+    #email {
+        @extend #name;
+    }
+    #message {
+        @extend #name;
+        
+        height: 100px;
+    }
+}
+
+.contact-container-icon-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-icon-and-text{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-icons {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-text {
+    color: $darkBlue;
+    font-size: 18px;
+}
+
+.contact-submit-btn {
+    @include smallAdminButton;
+    background-color: $darkPink;
+    margin: 0 auto;
+}
+
+.outside-map-container {
+    position: relative;
+    height: 50vh;
+}

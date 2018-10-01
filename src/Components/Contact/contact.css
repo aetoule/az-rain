@@ -1,0 +1,101 @@
+* {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+  font-family: 'Muli', sans-serif; }
+
+h1 {
+  font-size: 3rem;
+  color: #1B535B; }
+
+.home-page-header {
+  font-size: 3em; }
+
+h2 {
+  font-size: 1.5rem;
+  text-align: left; }
+
+p {
+  color: #1B535B;
+  font-size: 17px; }
+
+.header-container {
+  width: 100vw;
+  height: 23vh;
+  background-image: url("../../media//patrick-brinksma-580128-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover; }
+
+.contact-left-and-right-container {
+  width: 100%;
+  min-height: 100vh; }
+  .contact-left-and-right-container .contact-left-column {
+    position: relative;
+    float: left;
+    width: 55%;
+    margin-top: 1%;
+    padding: 0 20px;
+    height: 300px; }
+  .contact-left-and-right-container .contact-right-column {
+    float: right;
+    height: 300px;
+    margin-top: 1%;
+    position: relative;
+    width: 37%; }
+
+#contact-form {
+  background-color: #E4DDDE;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 20px; }
+  #contact-form ::-webkit-input-placeholder {
+    text-align: left;
+    font-size: 16px; }
+  #contact-form #name, #contact-form #email, #contact-form #message {
+    background-color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 600px;
+    border-style: none;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+    vertical-align: top; }
+  #contact-form #message {
+    height: 100px; }
+
+.contact-container-icon-text {
+  display: flex;
+  flex-direction: column; }
+
+.contact-icon-and-text {
+  display: flex;
+  flex-direction: row; }
+
+.contact-icons {
+  width: 50px;
+  height: 50px; }
+
+.contact-text {
+  color: #1B535B;
+  font-size: 18px; }
+
+.contact-submit-btn {
+  height: 32px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 20px;
+  color: white;
+  border-style: none;
+  background-color: #614B4E;
+  margin: 0 auto; }
+
+.outside-map-container {
+  position: relative;
+  height: 50vh; }

@@ -1,10 +1,20 @@
 * {
   text-align: center;
   font-size: 12px;
-  line-height: 1.2; }
-
-.App-intro {
-  font-size: large; }
+  line-height: 1.2;
+  font-family: 'Muli', sans-serif; }
 
 h1 {
-  font-size: 4rem; }
+  font-size: 3rem;
+  color: #1B535B; }
+
+.home-page-header {
+  font-size: 3em; }
+
+h2 {
+  font-size: 1.5rem;
+  text-align: left; }
+
+p {
+  color: #1B535B;
+  font-size: 17px; }

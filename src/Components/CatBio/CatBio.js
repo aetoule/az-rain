@@ -4,7 +4,6 @@ import axios from 'axios';
 import './catbio.css';
 import {login, logout} from '../../redux/reducer';
 import {Link} from 'react-router-dom';
-import Header from '../Header/Header';
 
 class CatBio extends Component {
     constructor(props) {
@@ -38,20 +37,25 @@ class CatBio extends Component {
                 {/* <div className="couch-cat"> */}
                 <div className="header-container">
                 </div>
-                <h1 className="adopt-title-text">Adopt a cat</h1>
-                <img className="catbio-cat-img" src={profile.img}/>
-                <div className="text-area"> 
-                    <h2 className="catbio-cat-name">{profile.name}</h2>
-                    <h3 className="catbio-cat-age">{profile.age}</h3>
-                    <h4 className="catbio-cat-gender">{profile.gender}</h4>
-                    <h4 className="catbio-cat-breed">{profile.breed}</h4>
-                    <h4 className="catbio-cat-type">{profile.type}</h4>
-                    <h4 className="catbio-cat-color">{profile.color}</h4>
+                <h1>Adopt a cat</h1>
+                <div className="catbio-left-and-right-side-container">
+                    <div className="catbio-left-side-container">
+                        <img className="catbio-cat-img" src={profile.img}/>
+                    </div>
+                    <div className="catbio-right-side-container"> 
+                        <div className="catbio-info-text">
+                            <h2 className="catbio-cat-name">{profile.name}</h2>
+                            <h3 className="catbio-cat-age">{profile.age}</h3>
+                                <div className="catbio-info-text-row">
+                                    <h4 className="catbio-cat-gender">{profile.gender}&nbsp; · &nbsp;</h4>
+                                    <h4 className="catbio-cat-color">{profile.color}&nbsp;   · &nbsp;</h4>
+                                    <h4 className="catbio-cat-breed">{profile.breed}&nbsp;  · &nbsp;</h4>
+                                    <h4 className="catbio-cat-type">{profile.type}</h4>
+                                </div>
+                            <p className="catbio-cat-description">{profile.description}</p>
+                        </div>
 
-                    <p className="catbio-cat-description">{profile.description}</p>
-                </div>
-
-                <div className= "admin-edit-button">
+                        <div className= "admin-edit-button">
                 {/* { admin 
                     ?
                     <div>
@@ -61,10 +65,14 @@ class CatBio extends Component {
                 } */}
 
                 <Link to={`/catbio/edit/${profile.id}`}><button className="admin-edit-btn">Edit</button></Link>
-                <button className="admin-edit-btn"
+                <button className="admin-delete-btn"
                     onClick={() => this.handleDeleteCat(this.props.match.params.id)}>Delete</button>
 
                 </div>
+                    </div>
+                </div>
+
+                
             </div>
         );
     }

@@ -1,4 +1,25 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
+* {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+  font-family: 'Muli', sans-serif; }
+
+h1 {
+  font-size: 3rem;
+  color: #1B535B; }
+
+.home-page-header {
+  font-size: 3em; }
+
+h2 {
+  font-size: 1.5rem;
+  text-align: left; }
+
+p {
+  color: #1B535B;
+  font-size: 17px; }
+
 .header-background-img-cat {
   background-position: center;
   background-repeat: no-repeat;
@@ -9,27 +30,30 @@
 
 a {
   padding: 0 4px;
-  flex: 33%;
-  display: inline-block;
-  flex-wrap: wrap;
-  padding: 0 4px;
   justify-content: center; }
 
+.row {
+  font-size: 0; }
+
 .mapped-cat-list {
-  flex: 33%;
-  /* max-width: 33%; */
-  padding: 0 4px; }
+  width: 32%;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0.1em; }
 
 .cat-img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  margin-top: 8px;
+  margin-top: 10px;
   vertical-align: middle; }
 
 .cat-name {
   color: #1B535B;
-  font-size: 2.5em;
+  font-size: 2rem;
   font-weight: bold;
   text-align: left;
   line-height: 50%;
@@ -38,7 +62,7 @@ a {
 
 .cat-age {
   color: #1B535B;
-  font-size: 2em;
+  font-size: 1.5rem;
   text-align: left;
   margin: 0.5em 0px 1em 0px;
   padding: 0px 0px 0px 0px; }
@@ -52,20 +76,30 @@ a {
   font-size: 3em;
   font-weight: bold;
   margin: auto;
-  color: #1E565D;
+  color: #1B535B;
   padding: 1em;
   /* color: #614B4E; */ }
 
+.filter-and-grid-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto; }
+
 .filter-container {
   display: flex;
-  background: #D8D8D8;
+  background: #EBEBEB;
   border-radius: 10px;
-  opacity: 0.85;
-  min-width: 500px;
-  max-width: 800px;
-  margin: auto;
+  width: 100%;
+  margin: 0 0 1em 0;
   flex-direction: column;
   padding: 1em; }
+
+.cat-grid-container {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
 
 .filter-text-and-icon-container {
   display: flex;
@@ -74,11 +108,12 @@ a {
   align-items: center; }
 
 .filter-icon {
-  height: 50px;
-  width: 50px; }
+  height: 38px;
+  width: 38px;
+  padding: 0 10px 0 0; }
 
 .filter-search-text {
-  color: #1B535B;
+  color: #4ECDC4;
   font-size: 2em;
   font-family: 'Muli', sans-serif; }
 
@@ -97,15 +132,26 @@ a {
   align-items: center; }
 
 .reset-filter-btn {
-  background-color: #FFE76C;
-  border-radius: 0.5em;
-  height: 2em;
-  width: 5em;
-  /* font-size: 1em; */
-  font-family: 'Muli', sans-serif; }
+  height: 32px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 20px;
+  color: white;
+  border-style: none;
+  background-color: #FFE76C; }
 
 .submit-filter-btn {
-  background-color: #FF6B6A; }
+  height: 32px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 20px;
+  color: white;
+  border-style: none;
+  background-color: #FF6B6B; }
 
 .add-cat-btn {
   height: 3em;
@@ -131,10 +177,8 @@ html {
 body {
   font-family: 'Muli', sans-serif; }
 
-.stv-radio-buttons-wrapper {
-  clear: both;
-  /* display: inline-block; */
-  /* background: pink; */ }
+.stv-radio-buttons-wrapper, .stv-radio-buttons-wrapper2, .stv-radio-buttons-wrapper3 {
+  padding: 0 5px; }
 
 .stv-radio-button {
   position: absolute;
@@ -146,10 +190,10 @@ body {
   /* float: left; */
   padding: 0.5em 2em;
   cursor: pointer;
-  border: 2px solid #4ECDC5;
-  /* margin-right: -1px; */
+  border: 2px solid #4ECDC4;
+  margin-right: -1px;
   color: #1B535B;
-  background-color: #ffffff; }
+  background-color: white; }
 
 .stv-radio-button + label:first-of-type {
   border-radius: .7em 0 0 .7em; }
@@ -158,5 +202,5 @@ body {
   border-radius: 0 .7em .7em 0; }
 
 .stv-radio-button:checked + label {
-  background-color: #4ECDC5;
+  background-color: #4ECDC4;
   color: white; }

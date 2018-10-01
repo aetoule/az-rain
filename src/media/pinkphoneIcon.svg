@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="396px" height="396px" viewBox="0 0 396 396" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc> 
+    <defs></defs>
+    <g id="Phone-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <circle id="Oval" fill="#614B4E" cx="198" cy="198" r="198"></circle>
+            <g id="noun_Phone_1853873" transform="translate(86.000000, 76.000000)" fill="#E4DDDE" stroke="#E4DDDE" stroke-width="6">
+                <path d="M72,94 C69,84 81,70 84,66 C86,61 57,8 43,15 C33,21 13,37 13,47 C13,99 145,231 198,231 C207,231 224,212 229,201 C236,187 183,158 179,161 C152,173 164,190 109,135 C91,117 73,98 72,94 Z M93,76 C82,92 78,85 119,126 C166,173 149,159 173,148 C187,142 256,178 241,207 C233,222 214,244 198,244 C137,244 0,107 0,47 C0,31 22,11 37,3 C66,-12 103,60 96,71 C95,72 94,74 93,76 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

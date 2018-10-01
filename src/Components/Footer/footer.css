@@ -1,6 +1,11 @@
+
 .footer-content {
     background: #E4DDDE;
     padding: 1em;
+    /* position: static; */
+    flex: 0 0 50px;
+    margin-top: auto;
+    width: 100%;
 }
 
 .footer-text {

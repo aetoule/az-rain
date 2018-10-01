@@ -1,4 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import '../../layout';
+@import '../../assets';
+@import '../../App.scss';
+
 .header-background-img-cat {
   background-position: center;
   background-repeat: no-repeat;
@@ -8,51 +12,47 @@
   width: 100vw; 
 }
 
-// .row {
-//   display: inline-block;
-//   flex-wrap: wrap;
-//   padding: 0 4px;
-//   justify-content: center; 
-// }
 a {
-    padding: 0 4px;
-    flex: 33%;
-    display: inline-block;
-    flex-wrap: wrap;
     padding: 0 4px;
     justify-content: center;
 }
-  
+
+// parent 
+.row {
+    @include row;
+}
+
+// child
 .mapped-cat-list {
-  flex: 33%;
-  /* max-width: 33%; */
-  padding: 0 4px;
+  @include col(1,4, $first:true)
+
 }
 
 .cat-img {
-//   height: 30em;
-//   width: 30em;
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-top: 8px;
-  vertical-align: middle; }
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 10px;
+    vertical-align: middle; 
+}
 
 .cat-name {
-  color: #1B535B;
-  font-size: 2.5em;
+  color: $darkBlue;
+  font-size: 2rem;
   font-weight: bold;
   text-align: left;
   line-height: 50%;
   margin: 0.5em 0px 0px 0px;
-  padding: 0px 0px 0px 0px; }
+  padding: 0px 0px 0px 0px; 
+}
 
 .cat-age {
-  color: #1B535B;
-  font-size: 2em;
+  color: $darkBlue;
+  font-size: 1.5rem;
   text-align: left;
   margin: 0.5em 0px 1em 0px;
-  padding: 0px 0px 0px 0px; }
+  padding: 0px 0px 0px 0px; 
+}
 
 .adopt-title-text-catalog {
   /* position: absolute; */
@@ -63,20 +63,35 @@ a {
   font-size: 3em;
   font-weight: bold;
   margin: auto;
-  color: #1E565D;
+  color: $darkBlue;
   padding: 1em;
   /* color: #614B4E; */ }
 
+.filter-and-grid-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
+}
+
 .filter-container {
   display: flex;
-  background: #D8D8D8;
+  background: $lightgray;
   border-radius: 10px;
-  opacity: 0.85;
-  min-width: 500px;
-  max-width: 800px;
-  margin: auto;
+//   opacity: 0.90;
+  width: 100%;
+//   margin: auto;
+  margin: 0 0 1em 0;
   flex-direction: column;
-  padding: 1em; }
+  padding: 1em; 
+}
+
+.cat-grid-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .filter-text-and-icon-container {
   display: flex;
@@ -85,11 +100,13 @@ a {
   align-items: center; }
 
 .filter-icon {
-  height: 50px;
-  width: 50px; }
+  height: 38px;
+  width: 38px;
+  padding: 0 10px 0 0; 
+}
 
 .filter-search-text {
-  color: #1B535B;
+  color: $turquoise;
   font-size: 2em;
   font-family: 'Muli', sans-serif; }
 
@@ -108,20 +125,20 @@ a {
   align-items: center; }
 
 .reset-filter-btn {
-  background-color: #FFE76C;
-  border-radius: 0.5em;
-  height: 2em;
-  width: 5em;
-  /* font-size: 1em; */
-  font-family: 'Muli', sans-serif; }
+    @include smallAdminButton;
+    background-color: $lightyellow;
+
+}
 
 .submit-filter-btn {
-  background-color: #FF6B6A; }
+    @include smallAdminButton;
+    background-color: $lightred; 
+}
 
 .add-cat-btn {
   height: 3em;
   width: 10em;
-  background-color: #FFE76C;
+  background-color: $lightyellow;
   border-radius: 0.8em;
   border-style: none;
   font-family: 'Muli', sans-serif;
@@ -143,24 +160,33 @@ body {
   font-family: 'Muli', sans-serif; }
 
 .stv-radio-buttons-wrapper {
-  clear: both;
-  /* display: inline-block; */
-  /* background: pink; */ }
+//   clear: both;
+  padding: 0 5px;
+}
+
+.stv-radio-buttons-wrapper2 {
+    @extend .stv-radio-buttons-wrapper;
+}
+
+.stv-radio-buttons-wrapper3 {
+    @extend .stv-radio-buttons-wrapper;
+}
 
 .stv-radio-button {
   position: absolute;
   padding: 4em;
   left: -9999em;
-  top: -9999em; }
+  top: -9999em; 
+}
 
 .stv-radio-button + label {
   /* float: left; */
   padding: 0.5em 2em;
   cursor: pointer;
-  border: 2px solid #4ECDC5;
-  /* margin-right: -1px; */
-  color: #1B535B;
-  background-color: #ffffff; }
+  border: 2px solid $turquoise;
+  margin-right: -1px;
+  color: $darkBlue;
+  background-color: white; }
 
 .stv-radio-button + label:first-of-type {
   border-radius: .7em 0 0 .7em; }
@@ -169,5 +195,5 @@ body {
   border-radius: 0 .7em .7em 0; }
 
 .stv-radio-button:checked + label {
-  background-color: #4ECDC5;
+  background-color: $turquoise;
   color: white; }

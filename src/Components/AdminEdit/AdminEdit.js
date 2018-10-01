@@ -12,12 +12,15 @@ class AdminEdit extends Component {
             img: '',
             name: '',
             age: 0,
+            gender: '',
+            type: '',
+            color: '',
+            breed: '',
             description:''      
          }
     }
     componentDidMount() {
-        console.log('fired');
-        
+        console.log('fired');  
         axios.get(`/api/cats/${this.props.match.params.id}`).then(res => {
             console.log(res);
             
@@ -25,16 +28,20 @@ class AdminEdit extends Component {
                 img: res.data[0].img,
                 name: res.data[0].name,
                 age: res.data[0].age,
+                gender: res.data[0].gender,
+                type: res.data[0].type,
+                color: res.data[0].color,
+                breed: res.data[0].breed,
                 description: res.data[0].description  
-            }
-                
+            }              
         )
         }).catch(err => console.log('err', err));  
     }
-    handleSaveEdits = (id, img, name, age, description) => {
-        axios.put(`/api/cats/${id}`, {img, name, age, description}).then(res => {
+    handleSaveEdits = (id, img, name, age, gender, type, color, breed, description) => {
+        console.log('this.state is ', this.state);
+        axios.put(`/api/cats/${id}`, {img, name, age, gender, type, color, breed, description}).then(res => {
             // TODO ADD REDIRECT HERE FFS
-            window.location.replace('/adopt/catalog')
+            window.location.replace('/adopt/catalog');
         }).catch(err => console.log('error ', err));
     }
 
@@ -56,6 +63,27 @@ class AdminEdit extends Component {
         })  
     }
 
+    handleChangeGender = value => {
+        this.setState ({
+            gender: value
+        })  
+    }
+    handleChangeType = value => {
+        this.setState ({
+            type: value
+        })  
+    }
+    handleChangeColor = value => {
+        this.setState ({
+            color: value
+        })  
+    }
+    handleChangeBreed = value => {
+        this.setState ({
+            breed: value
+        })  
+    }
+
     handleChangeDescription = value => {
         this.setState ({
             description: value
@@ -64,34 +92,39 @@ class AdminEdit extends Component {
 
     render() { 
         console.log(this.state.profile);
-        let {img, name, age, description} = this.state;
+        let {img, name, age, gender, type, color, breed, description} = this.state;
         // let {profile} = this.state;
         const {login, logout, admin} = this.props;
         return ( 
             <div className="entire-adminEdit-page-container">
                 {/* <div className="couch-cat"> */}
                 <div className="header-container">
-                    <h1 className="adopt-title-text">Adopt a cat</h1>
                 </div>
-                <img className="catbio-cat-img" src={img}/>
-                <input type="text" value={img} onChange={(e) => this.handleChangeImg(e.target.value)} />
-
-                <div className="text-area"> 
-                    <h1>Name:</h1>
-                    <h1 className="catbio-cat-name">{name}</h1>
+                <h1>Adopt a cat</h1>
+                <img className="adminEdit-cat-img" src={img}/>
+                <div className="adminEdit-text-area"> 
+                    <h2>Image URL:</h2>
+                    <input type="text" value={img} onChange={(e) => this.handleChangeImg(e.target.value)} />
+                    <h2>Name:</h2>
                     <input type="text" value={name} onChange={(e) => this.handleChangeName(e.target.value)} />
-
                     <h2>Age:</h2>
-                    <h2 className="catbio-cat-age">{age}</h2>
                     <input type="text" value={age} onChange={(e) => this.handleChangeAge(e.target.value)} />
 
-                    <p>Description:</p>
+                    <h2>Gender:</h2>
+                    <input type="text" value={gender} onChange={(e) => this.handleChangeGender(e.target.value)} />
+                    <h2>Type:</h2>
+                    <input type="text" value={type} onChange={(e) => this.handleChangeType(e.target.value)} />
+                    <h2>Color:</h2>
+                    <input type="text" value={color} onChange={(e) => this.handleChangeColor(e.target.value)} />
+                    <h2>Breed:</h2>
+                    <input type="text" value={breed} onChange={(e) => this.handleChangeBreed(e.target.value)} />
+
+                    <h2>Description:</h2>
                     {/* <p className="catbio-cat-description">{description}</p> */}
                     <textarea value={description} onChange={(e) => this.handleChangeDescription(e.target.value)} />
 
                     <button className="admin-edit-btn"
-                    onClick={() => this.handleSaveEdits(this.props.match.params.id, img, name, age, description)}>Save</button>
-
+                    onClick={() => this.handleSaveEdits(this.props.match.params.id, img, name, age, gender, type, color, breed, description)}>Save</button>
                 </div>
             </div>          
         );

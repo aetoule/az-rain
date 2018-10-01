@@ -140,7 +140,7 @@ app.post('/send', (req, res, next) => {
   var name = req.body.name
   var email = req.body.email
   var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n message: ${message} `
+  var content = `<h1 style="background-color: #E4DDDE; color:#614B4E">Name: ${name}</h1> \n <h2 style="background-color: #E4DDDE">Email: ${email}</h2> \n <p>Message: ${message}</p> `
   console.log('name', name);
   console.log('email', email);
   console.log('message', message);
@@ -148,7 +148,8 @@ app.post('/send', (req, res, next) => {
     from: name,
     to: creds.USER,  //Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
-    text: content
+    text: content,
+    html: `${content}`
   }
 
   transporter.sendMail(mail, (err, data) => {
