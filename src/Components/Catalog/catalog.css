@@ -15,7 +15,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  text-align: left; }
+  text-align: left;
+  color: #614B4E; }
 
 h3 {
   text-align: left;
@@ -43,7 +44,6 @@ p {
   width: 100vw; }
 
 a {
-  padding: 0 4px;
   justify-content: center; }
 
 .row {

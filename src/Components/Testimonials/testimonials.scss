@@ -2,11 +2,47 @@
 @import '../../App.scss';
 @import '../../assets';
 
-// .testimonials-img-and-text {
-//     .person-img{
 
-//     }
-//     .testimonial-text{
-
-//     }
+// .space-between-h1-and-h2 {
+//     height: 20px;
 // }
+// .meet-az-rain-subtext {
+//     max-width: 600px;;
+// }
+
+.testimonials-rows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    .testimonials-img-and-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+
+        .testimonial-jordan-img{
+            background-image: url("../../media/WQNR9570.jpg");
+            border-radius: 50%;
+            // border-style: solid;
+            // border-color: $lightpink;
+            // border-width: 5px;
+            height: 300px;
+            width: 300px;
+            background-size: contain;
+
+        }
+        .testimonial-kaylin-img {
+            @extend .testimonial-jordan-img;
+            background-image: url("../../media/IMG_0410.jpeg");
+            background-repeat:no-repeat; 
+            background-size:cover;
+
+        }
+        .testimonial-text{
+            max-width: 500px;
+            padding-left: 50px;
+        }
+    }
+}

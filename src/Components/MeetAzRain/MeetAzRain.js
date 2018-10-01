@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import './meetazrain.css';
+import ReactDOM from 'react-dom';
 
-class MeetAzRain extends Component {
+
+export default class MeetAzRain extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
+    }
+
+    componentDidMount(){
+        window.scroll(0,0);
+
+        
     }
     render() { 
         return ( 
@@ -39,13 +47,9 @@ class MeetAzRain extends Component {
                             </p>
                         </div>
                     </div>
-
-                </div>
                 <div className="space-between-sections"></div>
-
+            </div>
             </div>
          );
     }
 }
- 
-export default MeetAzRain;

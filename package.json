@@ -23,7 +23,8 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "styled-components": "^3.4.9"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -43,5 +44,8 @@
     "/send": {
       "target": "http://localhost:5432"
     }
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0"
   }
 }

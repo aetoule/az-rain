@@ -140,7 +140,7 @@ app.post('/send', (req, res, next) => {
   var name = req.body.name
   var email = req.body.email
   var message = req.body.message
-  var content = `<h1 style="background-color: #E4DDDE; color:#614B4E">Name: ${name}</h1> \n <h2 style="background-color: #E4DDDE">Email: ${email}</h2> \n <p>Message: ${message}</p> `
+  var content = `<body style="background-color: #E4DDDE; border-radius: 10px; padding:10px;"><h1 style="background-color: #E4DDDE; color:#614B4E; font-family:'Muli', sans-serif">Name: ${name}</h1> \n <h2 style="background-color: #E4DDDE; font-family:'Muli', sans-serif;color:#614B4E">Email: ${email}</h2> \n <p style="font-family:'Muli', sans-serif; font-size:17px">Message: ${message}</p></body>`
   console.log('name', name);
   console.log('email', email);
   console.log('message', message);

@@ -19,11 +19,7 @@ import SponsorAPet from './Components/SponsorAPet/SponsorAPet';
 
 export default (
     <Switch>
-        <Route component={Home} exact path="/" />
-        {/* probably will delete */}
-        {/* <Route component={Adopt} exact path="/adopt" /> */}
-        {/* <Route component={LocationSearch} exact path="/adopt/location-search" /> */}
-        
+        <Route component={Home} exact path="/" />      
         <Route component={Catalog} exact path="/adopt/catalog" />
         {/* secret link for admins only */}
         <Route component={Auth} exact path="/auth" /> 

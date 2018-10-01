@@ -14,7 +14,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  text-align: left; }
+  text-align: left;
+  color: #614B4E; }
 
 h3 {
   text-align: left;
@@ -44,7 +45,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 152px;
     /* background-color: turquoise; */ }
   .menu-button {
     display: none; }
@@ -102,7 +103,7 @@ p {
   .dropdown {
     position: relative;
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: flex-end; }
   .dropdown-content {
     top: 25%;
     left: 0%;
@@ -149,10 +150,10 @@ p {
     text-decoration: none;
     margin: 12px 0;
     text-align: left;
-    padding: 0 4px;
     border-radius: 5px; }
   .header-main-list {
-    font-size: 1.33rem; }
+    font-size: 1.33rem;
+    margin-left: 71px; }
   /* styling for the Adopt non dropdown list header item */
   a {
     font-style: none;

@@ -14,7 +14,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  text-align: left; }
+  text-align: left;
+  color: #614B4E; }
 
 h3 {
   text-align: left;
@@ -32,3 +33,28 @@ p {
   color: #1B535B;
   font-size: 17px;
   text-align: left; }
+
+.testimonials-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px; }
+  .testimonials-rows .testimonials-img-and-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; }
+    .testimonials-rows .testimonials-img-and-text .testimonial-jordan-img, .testimonials-rows .testimonials-img-and-text .testimonial-kaylin-img {
+      background-image: url("../../media/WQNR9570.jpg");
+      border-radius: 50%;
+      height: 300px;
+      width: 300px;
+      background-size: contain; }
+    .testimonials-rows .testimonials-img-and-text .testimonial-kaylin-img {
+      background-image: url("../../media/IMG_0410.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .testimonials-rows .testimonials-img-and-text .testimonial-text {
+      max-width: 500px;
+      padding-left: 50px; }

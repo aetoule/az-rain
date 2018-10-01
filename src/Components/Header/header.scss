@@ -13,7 +13,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 0 60px;
+        padding: 0 152px;
         /* background-color: turquoise; */
     }
     
@@ -88,7 +88,7 @@
     .dropdown {
         position: relative;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
     }
     
     .dropdown-content {
@@ -144,12 +144,14 @@
         text-decoration: none;
         margin: 12px 0;
         text-align: left;
-        padding: 0 4px;
+        // padding: 0 4px;
         border-radius: 5px;
     }
 
     .header-main-list {
         font-size: 1.33rem;
+        margin-left: 71px;
+
     }
     /* styling for the Adopt non dropdown list header item */
     a {
