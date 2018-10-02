@@ -52,12 +52,10 @@ class Catalog extends Component {
     // filter thru cat list based on whats in state at the time.
     handleSubmit = () => {
         let filteredList = this.props.catsList.filter((cat) => {
-            // console.log('entered filteredList',this.state) 
             if (this.state.gender !== '' && this.state.type !== '' && this.state.breed !== '') {
                 // if all 3 are selected
                 if (cat.gender == this.state.gender && cat.type == this.state.type && cat.breed == this.state.breed) {
                     // if the gender, type, and breed of state match those of this cat, return cat
-                    // console.log('first if')
                     return cat
                 }
             }
@@ -65,17 +63,14 @@ class Catalog extends Component {
                 // if gender and type are selected
                 if (cat.gender == this.state.gender && cat.type == this.state.type) {
                     // if the gender and type of state match those of this cat, return cat
-                    console.log('second if')
                     return cat
                 }
             } else {
                 if(cat.gender == this.state.gender) {
                     // if the gender of this cat matches the gender in state then return this cat
-                    console.log('third if')
                     return cat
                 } else if (cat.type == this.state.type) {
                     // if the type of this cat matches the type in state
-                    console.log('fourth if')
                     return cat
                 }         
             } 
