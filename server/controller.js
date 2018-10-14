@@ -68,5 +68,8 @@ module.exports = {
         dbInstance.delete_cat(+id)
         .then(cats => {res.status(200).send(cats)})
         .catch(err => console.log('errorMessage: error deleting kitty', err));
+    },
+    getInstaPics(req, res) {
+        res.status(200).send(res);
     }
 }

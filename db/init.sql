@@ -104,3 +104,8 @@ If you are interested in Isabella, please complete the Cat Interest Form on our 
 
 If you are interested in adopting, please complete the Cat Adoption Application and, if you are selected as a prospective adopter, we will contact you to set up a meet and greet. Thank you for considering rescuing an animal in need!');
 
+
+
+select *, admins.id
+from cats c
+join admins ON admins.id = c.added_by

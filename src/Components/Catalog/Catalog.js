@@ -128,7 +128,6 @@ class Catalog extends Component {
                         <p className="cat-name">{cat.name}</p> 
                         <p className="cat-age">{cat.age}</p> 
                     {/* <button onClick={() => props.deleteHouse(house.id)}>Delete</button> */}
-                    
                     </div>
                 </Link>
             )
@@ -228,5 +227,7 @@ const mapStateToProps = state => {
         catsList
     }
 }
+
+
 
 export default connect (mapStateToProps, {setCatsList}) (Catalog);

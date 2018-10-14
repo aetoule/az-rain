@@ -42,7 +42,7 @@ export class Contact extends Component {
         const message = document.getElementById('message').value;
         axios({
             method: "POST", 
-            url:"http://az-rain.com/send", 
+            url:"http://localhost:3000/send", 
             data: {
                 name: name,   
                 email: email,  
@@ -61,12 +61,16 @@ export class Contact extends Component {
                     // document.getElementById("contact-form").reset();
                 }
                 // this.resetForm()
+                // this.state.name.reset();
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")
             }
         })
         
     }
+
+    // this.reset();
+
 
     // resetForm(){
     //     document.getElementById('contact-form').reset();
@@ -141,7 +145,6 @@ export class Contact extends Component {
                     }}
                     style={style}>
             
-        
                     <Marker onClick={this.onMarkerClick}
                             name={'Current location'} />
             

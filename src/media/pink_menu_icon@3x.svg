@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="78px" viewBox="0 0 90 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Menu-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#614B4E" fill-rule="nonzero">
+            <g id="noun_hamburger-menu_549978">
+                <path d="M28.883,15.69 L61.118,15.69 C65.997,15.69 69.987,12.193 69.987,7.919 C69.987,3.647 65.997,0.149 61.118,0.149 L28.883,0.149 C24.004,0.149 20.013,3.646 20.013,7.919 C20.013,12.193 24.004,15.69 28.883,15.69 Z" id="Shape"></path>
+                <path d="M61.118,62.31 L28.883,62.31 C24.004,62.31 20.013,65.807 20.013,70.081 C20.013,74.353 24.004,77.851 28.883,77.851 L61.118,77.851 C65.997,77.851 69.987,74.354 69.987,70.081 C69.987,65.807 65.997,62.31 61.118,62.31 Z" id="Shape"></path>
+                <path d="M81.13,31.23 L8.871,31.23 C3.992,31.23 0.001,34.726 0.001,39 C0.001,43.274 3.992,46.77 8.871,46.77 L81.13,46.77 C86.009,46.77 89.999,43.274 89.999,39 C89.999,34.726 86.009,31.23 81.13,31.23 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

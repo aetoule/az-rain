@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import hamburgerMenu from '../../media/noun_hamburger menu_549978.svg';
+import hamburgerMenu from '../../media/pink_menu_icon@3x.svg';
 import whitecatlogo from '../../media/SVG/noArtboardWhiteKittyLogo.svg';
 
 class Header extends Component {
@@ -18,7 +18,7 @@ class Header extends Component {
         return ( 
             <header>
                 <div className="logo-content">
-                    <img className="white-cat-logo" src={whitecatlogo}/>
+                    <div className="white-cat-logo"></div>
                     <li className="logo"><Link className="link" to= "/"> AZ RAIN</Link></li>
                 </div>
                 <div> <img className='menu-button' src={hamburgerMenu} onClick={() => this.setState({toggle: !this.state.toggle})}/> </div>
