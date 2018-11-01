@@ -174,7 +174,7 @@ app.get('*', (req, res)=>{
   res.sendFile(path.join(__dirname, '../build/index.html'));
 })
 
-const PORT = 5432;
+const PORT = 5100;
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT} `);
+  console.log(`Server listening on port ${5100} `);
 });

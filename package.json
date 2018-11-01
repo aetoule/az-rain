@@ -36,13 +36,13 @@
   },
   "proxy": {
     "/callback": {
-      "target": "http://localhost:5432"
+      "target": "http://localhost:5100"
     },
     "/api": {
-      "target": "http://localhost:5432"
+      "target": "http://localhost:5100"
     },
     "/send": {
-      "target": "http://localhost:5432"
+      "target": "http://localhost:5100"
     }
   },
   "devDependencies": {
