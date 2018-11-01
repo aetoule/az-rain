@@ -1,24 +1,46 @@
 import React, { Component } from 'react';
 import './meetazrain.css';
 import ReactDOM from 'react-dom';
-
+import SponsorAPet from '../SponsorAPet/SponsorAPet';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default class MeetAzRain extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {    
+            gender: '',
+            type: '',
+            breed: '',
+            kittyList:[]        
+        }
     }
-
-    componentDidMount(){
-        window.scroll(0,0);
-
+    componentDidMount() {
         
+        // axios.post('    https://api.instagram.com/oauth/access_token', {client_id:90890eee8b2f41688a6377a925efa561, client_secret:2b2c6bd3bae34796af249b4b8011e1f9, grant_type: authorization_code, redirect_uri:http://az-rain.com, code:ec644a81af5c4505ae17456c017466ee}).then(res => {
+        //     console.log(res.data);
+            
+        // this.setState({
+        //     // kittyList: res.data
+        // })
+        // }).catch(err => console.log('err', err));  
     }
+
+    helloWorld() {
+        this.resetForm()
+    }
+
+    resetForm(){
+        document.getElementById('reset-page').reset();
+    }
+
     render() { 
+        // let {gender, type, breed} = this.state;
+        
         return ( 
             <div>
                 <div className="header-container"></div>
-                <div className="meetazrain-under-header-content">
+                <div  className="meetazrain-under-header-content">
                     <h1>We Are R.A.I.N</h1>
                     <h2 className="meet-az-rain-subtext">(Rescuing Animals In Need)</h2>
                     <div className="space-between-header-and-content"></div>
@@ -47,8 +69,19 @@ export default class MeetAzRain extends Component {
                             </p>
                         </div>
                     </div>
-                <div className="space-between-sections"></div>
-            </div>
+
+                    <div className="space-between-sections"></div>
+
+                    <div className="space-between-sections"></div>
+
+                    {/* just to text out propTypes: */}
+                    {/* <Link to="/help_rain/sponsor_a_pet">
+                    <SponsorAPet count={10} catListProp ={printCatList} />Sponsor A Pet</Link> */}
+
+                    <div className="cat-information-display">
+                    </div>
+                    <div id="reset-page"></div>
+                </div>              
             </div>
          );
     }

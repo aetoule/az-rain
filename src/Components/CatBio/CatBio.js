@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import {setCatsList} from '../../redux/reducer';
 import axios from 'axios';
 import './catbio.css';
-import {login, logout} from '../../redux/reducer';
 import {Link} from 'react-router-dom';
 
 class CatBio extends Component {

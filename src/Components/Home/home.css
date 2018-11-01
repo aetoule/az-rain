@@ -38,20 +38,31 @@ p {
   background-size: cover;
   object-fit: cover;
   background-image: url("../../media/james-sutton-705775-unsplash.jpg");
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   background-position: center; }
+  @media only screen and (max-width: 812px) {
+    .home-header-container {
+      background-image: url("../../media/charlie-deets-517076-unsplash.jpg"); } }
 
 .home-page-text-content, .home-page-text-content-right {
   display: flex;
-  padding: 0 200px;
+  padding: 0 150px;
   flex-direction: column;
   align-items: flex-start; }
+  @media only screen and (max-width: 812px) {
+    .home-page-text-content, .home-page-text-content-right {
+      padding: 8vh 8vw; } }
   .home-page-text-content .h1-for-home-page, .home-page-text-content-right .h1-for-home-page, .home-page-text-content .h1-for-home-page-right, .home-page-text-content-right .h1-for-home-page-right {
     color: white;
     text-align: left;
-    font-size: 4rem;
+    font-size: 48px;
     line-height: 2rem; }
+    @media only screen and (max-width: 812px) {
+      .home-page-text-content .h1-for-home-page, .home-page-text-content-right .h1-for-home-page, .home-page-text-content .h1-for-home-page-right, .home-page-text-content-right .h1-for-home-page-right {
+        font-size: 28px;
+        color: #1B535B;
+        line-height: 1rem; } }
   .home-page-text-content .home-page-btn, .home-page-text-content-right .home-page-btn {
     height: 62px;
     width: 268px;
@@ -102,7 +113,7 @@ p {
 .home-section-4-container {
   background-size: cover;
   object-fit: cover;
-  background-image: url("../../media/archie1.jpg");
+  background-image: url("../../media/tucker-good-499943-unsplash.jpg");
   height: 80vh;
   width: 100vw;
   background-position: center; }
@@ -113,9 +124,6 @@ p {
 .home-page-btn-testimonials {
   font-size: 1.7em; }
 
-/* will probably delete because i don't want a
-page with margins i want the text to have margins */
-/* body{
-    margin: 0 auto !important;
-    float: none !important;
-} */
+@media only screen and (max-width: 812px) {
+  .space-between-header-and-content {
+    height: 0; } }

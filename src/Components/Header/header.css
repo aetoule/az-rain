@@ -45,17 +45,12 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 152px;
+    padding: 0 114px;
     /* background-color: turquoise; */ }
   .menu-button {
     display: none; }
   nav {
-    list-style-type: none;
-    /* top: 1em; */
-    /* position: absolute; */
-    /* display: flex; */
     justify-content: flex-end;
-    /* right: 0; */
     width: 59%; }
   ul {
     text-decoration: none;
@@ -88,9 +83,8 @@ p {
   .white-cat-logo {
     height: 3.2em;
     width: 3.2em;
-    /* left: 2.5em; */
-    /* position: absolute; */
-    /* top: 0.3em; */ }
+    background-image: url("../../media/whitecatlogo.svg");
+    background-repeat: no-repeat; }
   .logo {
     /* display: inline-block; */
     /* display: flex; */
@@ -101,106 +95,68 @@ p {
     left: 0.6em;
     /* background-color: green; */ }
   .dropdown {
-    position: relative;
     display: flex;
     justify-content: flex-end; }
-  .dropdown-content {
-    top: 25%;
-    left: 0%;
-    opacity: 0;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    transition: 0.35s all;
-    text-align: left;
-    display: block; }
-  .dropdown-content2 {
-    top: 60%;
-    opacity: 0;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    transition: 0.35s all;
-    text-align: left; }
-  .dropdown-content3 {
-    top: 60%;
-    opacity: 0;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    transition: 0.35s all;
-    text-align: left; }
-  .dropdown-content:hover, .dropdown-content2:hover, .dropdown-content3:hover {
-    opacity: 1;
-    top: 50%; }
-  .space {
-    padding: 5px 0px;
-    max-width: 150px;
-    font-size: 1.3rem;
-    color: #1B535B;
-    text-decoration: none;
-    margin: 12px 0;
-    text-align: left;
-    border-radius: 5px; }
   .header-main-list {
     font-size: 1.33rem;
     margin-left: 71px; }
-  /* styling for the Adopt non dropdown list header item */
+  /* styling for navigation items */
   a {
-    font-style: none;
-    /* display: inline-block; */
-    /* padding: 20px;
-        padding: 0 0 0 90px; */
-    font-family: 'Muli', sans-serif;
-    /* font-size: 2.4em; */
-    /* change this back to white to change back the "Adopt" and "Help RAIN" nav links */
-    /* color: #614B4E; */
     color: white;
     text-decoration: none;
     font-size: 1.33rem; } }
 
-@media (max-width: 768px) {
-  /* parent */
+@media (max-width: 812px) {
+  header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: turquoise; */ }
   .logo-content {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: center; }
+  .white-cat-logo {
+    height: 3.2em;
+    width: 3.2em;
+    position: absolute;
+    top: 8vw;
+    left: 8vw;
+    background-image: url("../../media/pink_cat_logo@3x.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
   .logo {
     position: absolute;
     list-style-type: none;
-    display: flex; }
+    top: 9.2vw;
+    margin: 0 auto;
+    color: #614B4E;
+    z-index: 9998; }
   a {
     text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-    font-family: 'muli', sans-serif; }
-  .white-cat-logo {
-    height: 3.33em;
-    width: 3.33em;
-    position: absolute;
-    left: 0;
-    background-color: pink; }
+    color: #614B4E;
+    font-size: 28px;
+    font-family: 'muli', sans-serif;
+    text-align: center; }
   .menu-button {
     display: initial;
-    /* position: absolute; */
+    position: absolute;
     z-index: 9999;
     border-radius: 50%;
-    height: 3.33em;
-    width: 3.33em;
+    height: 3.2em;
+    width: 3.2em;
     /* align-self: right; */
     top: 30px;
     right: 30px; }
   .header-main-list {
-    font-size: 2em; }
+    font-size: 2em;
+    padding: 0;
+    margin: 0; }
   nav {
     /* keeps header bar at top of screen */
     position: fixed;
@@ -209,23 +165,25 @@ p {
     /* bottom: 0; */
     left: 0;
     width: 100%;
-    height: 100%;
-    background: #1B535B;
-    opacity: 0.9;
+    height: 45%;
+    background: #E4DDDE;
+    opacity: 0.98;
     /* transform: translate(0px, 300px); */
-    transition: 0.3s;
+    transition: 0.5s;
     z-index: 9998;
     flex-direction: column;
-    color: white;
+    color: #E4DDDE;
     font-family: 'muli', sans-serif; }
   .link {
     text-decoration: none;
-    /* padding: 20px; */
-    color: white; }
-  header nav ul {
-    min-width: 100vw;
-    /* height: 300px; */
-    /* flex-direction: column; */
-    padding: 10px 0; }
+    color: #614B4E;
+    text-align: right; }
   header .show {
-    top: 0; } }
+    top: 0; }
+  header nav ul {
+    padding: 20px 100px 200px 90px; }
+  .header-main-list {
+    padding-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center; } }

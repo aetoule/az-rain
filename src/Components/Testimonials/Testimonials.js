@@ -4,7 +4,14 @@ import './testimonials.css';
 class Testimonials extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+         }
+    }
+
+    handleNameInput = (value) => {
+        this.setState ({
+            name: value
+        })
     }
     render() { 
         return ( 
@@ -35,7 +42,7 @@ class Testimonials extends Component {
                         </div>
                     </div>
                 </div>
-
+            
             </div>
          );
     }

@@ -26,7 +26,6 @@ app.use(session({
   // }
 }));
 
-
 massive(process.env.CONNECTION_STRING).then(database => {
     app.set('db', database);
     console.log('she asked me how to run nodemon');
@@ -98,6 +97,7 @@ massive(process.env.CONNECTION_STRING).then(database => {
   // Nodemailer
   var transport = {
     host: 'smtp.gmail.com',
+    
     auth: {
       user: creds.USER,
       pass: creds.PASS
@@ -132,6 +132,9 @@ app.post('/api/logout', (req, res) => {
   req.session.destroy();
   res.send('session destroyed');
 })
+
+//instagram endoints
+app.get('', controller.getInstaPics);
 
 
 // Nodemailer

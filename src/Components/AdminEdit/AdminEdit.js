@@ -41,8 +41,9 @@ class AdminEdit extends Component {
         console.log('this.state is ', this.state);
         console.log(id, img, name, age, gender, type, color, breed, description)
         axios.put(`/api/cats/${id}`, {img, name, age, gender, type, color, breed, description}).then(res => {
-            // TODO ADD REDIRECT HERE FFS
-            window.location.replace('/adopt/catalog');
+            // TODO ADD REDIRECT HERE
+            // window.location.replace('/adopt/catalog');
+            window.location.href = '/adopt/catalog';
         }).catch(err => console.log('error ', err));
     }
 

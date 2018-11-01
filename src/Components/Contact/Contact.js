@@ -61,12 +61,16 @@ export class Contact extends Component {
                     // document.getElementById("contact-form").reset();
                 }
                 // this.resetForm()
+                // this.state.name.reset();
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")
             }
         })
         
     }
+
+    // this.reset();
+
 
     // resetForm(){
     //     document.getElementById('contact-form').reset();
@@ -141,7 +145,6 @@ export class Contact extends Component {
                     }}
                     style={style}>
             
-        
                     <Marker onClick={this.onMarkerClick}
                             name={'Current location'} />
             

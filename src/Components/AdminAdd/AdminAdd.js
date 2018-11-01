@@ -102,45 +102,46 @@ class AdminAdd extends Component {
                 <div className="header-container">           
                 </div>
                 <h1>Adopt a cat</h1>
-                <img className="catbio-cat-img" src={img}/>
-                <input type="text" value={img} onChange={(e) => this.handleChangeImg(e.target.value)} />
+                <img className="adminEdit-cat-img" src={img}/>
+                    <div className="adminEdit-text-area-container"> 
+                    <div className="adminEdit-text-area"> 
+                        <h2>Image URL</h2>
+                        <input className="adminEdit-input-box" type="text" onChange={(e) => this.handleChangeImg(e.target.value)} />
+                        <h2>Name</h2>
+                        {/* <h1 className="catbio-cat-name">{name}</h1> */}
+                        <input className="adminEdit-input-box" type="text" value={name} onChange={(e) => this.handleChangeName(e.target.value)} />
 
-                <div className="text-area"> 
-                    <h2>Name:</h2>
-                    {/* <h1 className="catbio-cat-name">{name}</h1> */}
-                    <input type="text" value={name} onChange={(e) => this.handleChangeName(e.target.value)} />
+                        <h2>Age</h2>
+                        {/* <h2 className="catbio-cat-age">{age}</h2> */}
+                        <input className="adminEdit-input-box" type="text" value={age} onChange={(e) => this.handleChangeAge(e.target.value)} />
 
-                    <h2>Age:</h2>
-                    {/* <h2 className="catbio-cat-age">{age}</h2> */}
-                    <input type="text" value={age} onChange={(e) => this.handleChangeAge(e.target.value)} />
-
-                    <h2>Gender:</h2>
-                    <input type="text" value={gender} onChange={(e) => this.handleChangeGender(e.target.value)} />
-                    <h2>Type:</h2>
-                    <input type="text" value={type} onChange={(e) => this.handleChangeType(e.target.value)} />
-                    <h2>Color:</h2>
-                    <input type="text" value={color} onChange={(e) => this.handleChangeColor(e.target.value)} />
-                    <h2>Breed:</h2>
-                    <input type="text" value={breed} onChange={(e) => this.handleChangeBreed(e.target.value)} />
+                        <h2>Gender</h2>
+                        <input className="adminEdit-input-box" type="text" value={gender} onChange={(e) => this.handleChangeGender(e.target.value)} />
+                        <h2>Type</h2>
+                        <input className="adminEdit-input-box" type="text" value={type} onChange={(e) => this.handleChangeType(e.target.value)} />
+                        <h2>Color</h2>
+                        <input className="adminEdit-input-box" type="text" value={color} onChange={(e) => this.handleChangeColor(e.target.value)} />
+                        <h2>Breed</h2>
+                        <input className="adminEdit-input-box" type="text" value={breed} onChange={(e) => this.handleChangeBreed(e.target.value)} />
 
 
-                    <h2>Description:</h2>
-                    {/* <p className="catbio-cat-description">{description}</p> */}
-                    <textarea value={description} onChange={(e) => this.handleChangeDescription(e.target.value)} />
+                        <h2>Description:</h2>
+                        {/* <p className="catbio-cat-description">{description}</p> */}
+                        <textarea className="adminEdit-description-input-box" value={description} onChange={(e) => this.handleChangeDescription(e.target.value)} />
+                    </div>
+                    </div>
 
-                    <button className="admin-delete-btn"
-                    onClick={() => this.handleCancel(img, name, age, gender, type, color, breed, description)}>Cancel</button>
+                    <div className="admin-edit-and-cancel-btn">
+                        <button className="admin-delete-btn"
+                        onClick={() => this.handleCancel(img, name, age, gender, type, color, breed, description)}>Cancel</button>
 
-                    <button className="admin-edit-btn"
-                    onClick={() => this.handleAddCat(img, name, age, gender, type, color, breed, description)}>Add</button>
-
-                </div>
-            </div>          
+                        <button className="admin-edit-btn"
+                        onClick={() => this.handleAddCat(img, name, age, gender, type, color, breed, description)}>Add</button>
+                    </div>
+                </div> 
         );
     }
 }
-    
-    
     
     
 export default AdminAdd;
