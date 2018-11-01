@@ -97,6 +97,7 @@ massive(process.env.CONNECTION_STRING).then(database => {
   // Nodemailer
   var transport = {
     host: 'smtp.gmail.com',
+    
     auth: {
       user: creds.USER,
       pass: creds.PASS

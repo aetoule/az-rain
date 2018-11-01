@@ -23,7 +23,6 @@ class Catalog extends Component {
     componentDidMount() {
         axios.get('/api/cats').then(res => {
             console.log(res.data);
-            
             this.props.setCatsList(res.data)
         }).catch(err => console.log('err', err));  
     }
