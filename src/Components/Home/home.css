@@ -72,6 +72,9 @@ p {
     border-radius: 10px;
     border: none;
     margin-top: 40px; }
+    @media only screen and (max-width: 812px) {
+      .home-page-text-content .home-page-btn, .home-page-text-content-right .home-page-btn {
+        font-size: 1em; } }
 
 .home-section-2-container {
   background-size: cover;

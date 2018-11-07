@@ -18,8 +18,12 @@ class Header extends Component {
         return ( 
             <header>
                 <div className="logo-content">
-                    <div className="white-cat-logo"></div>
-                    <li className="logo"><Link className="link" to= "/"> AZ RAIN</Link></li>
+                    <Link className="link" to= "/">
+                        <div className="white-cat-logo">
+                        </div>
+                    </Link>
+                        <li className="logo"><Link className="link" to= "/"> AZ RAIN</Link>
+                        </li>
                 </div>
                 <div> <img className='menu-button' src={hamburgerMenu} onClick={() => this.setState({toggle: !this.state.toggle})}/> </div>
                     <nav className={this.state.toggle ? 'show' : ''}>

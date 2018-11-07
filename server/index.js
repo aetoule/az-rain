@@ -8,7 +8,6 @@ const axios = require('axios');
 var nodemailer = require('nodemailer');
 const creds = require('./config.js');
 
-// var Instafeed = require("instafeed.js");
 const app = express();
 app.use( express.static( `${__dirname}/../build` ) );
 
@@ -132,10 +131,6 @@ app.post('/api/logout', (req, res) => {
   req.session.destroy();
   res.send('session destroyed');
 })
-
-//instagram endoints
-app.get('', controller.getInstaPics);
-
 
 // Nodemailer
 app.post('/send', (req, res, next) => {

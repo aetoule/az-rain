@@ -98,63 +98,6 @@
         justify-content: flex-end;
 
     }
-    
-    // .dropdown-content {
-    //     top: 25%;
-    //     left: 0%;
-    //     opacity: 0;
-    //     position: absolute;
-    //     background-color: #f9f9f9;
-    //     min-width: 160px;
-    //     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    //     padding: 12px 16px;
-    //     z-index: 1;
-    //     transition: 0.35s all;
-    //     text-align: left;
-    //     display: block;
-    // }
-    // .dropdown-content2 {
-    //     top: 60%;
-    //     opacity: 0;
-    //     position: absolute;
-    //     background-color: #f9f9f9;
-    //     min-width: 160px;
-    //     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    //     padding: 12px 16px;
-    //     z-index: 1;
-    //     transition: 0.35s all;
-    //     text-align: left;
-    // }
-
-    // .dropdown-content3 {
-    //     top: 60%;
-    //     opacity: 0;
-    //     position: absolute;
-    //     background-color: #f9f9f9;
-    //     min-width: 160px;
-    //     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    //     padding: 12px 16px;
-    //     z-index: 1;
-    //     transition: 0.35s all;
-    //     text-align: left;
-    // }
-    
-    // .dropdown-content:hover, .dropdown-content2:hover, .dropdown-content3:hover {
-    // opacity: 1;
-    //     top: 50%;
-    // }
-    
-    // .space {
-    //     padding: 5px 0px;
-    //     max-width: 150px;
-    //     font-size: 1.3rem;
-    //     color: $darkBlue;
-    //     text-decoration: none;
-    //     margin: 12px 0;
-    //     text-align: left;
-    //     // padding: 0 4px;
-    //     border-radius: 5px;
-    // }
 
     .header-main-list {
         font-size: 1.33rem;
@@ -173,26 +116,17 @@
     
     header {
         position: absolute;
-        // height: 110px;
         left: 0;
         right: 0;
         background: transparent;
-        // top: 8vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        // padding: 0 152px;
-        /* background-color: turquoise; */
     }
 
     .logo-content {
         display: flex;
-
-        // justify-content: flex-start;
         flex-direction: row;
-        // padding-left: 8vw;
-        //  top: 8vw;
-        // max-width: 30%;
         align-items: center;
     }
 
@@ -212,12 +146,10 @@
         position: absolute;
         list-style-type: none;
         top: 9.2vw;
-        // left: 8vw;
         margin: 0 auto;
-        // padding-left: 55px;
         color: $darkPink;
         z-index: 9998;
-
+        display: none;
     }
 
 
@@ -235,8 +167,8 @@
         position: absolute;
         z-index: 9999;
         border-radius: 50%;
-        height: 3.2em;
-        width: 3.2em;
+        height: 2.5em;
+        width: 2.5em;
         /* align-self: right; */
         top: 30px;
         right: 30px;

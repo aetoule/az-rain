@@ -114,8 +114,7 @@ p {
     background: transparent;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    /* background-color: turquoise; */ }
+    align-items: center; }
   .logo-content {
     display: flex;
     flex-direction: row;
@@ -136,7 +135,8 @@ p {
     top: 9.2vw;
     margin: 0 auto;
     color: #614B4E;
-    z-index: 9998; }
+    z-index: 9998;
+    display: none; }
   a {
     text-decoration: none;
     color: #614B4E;
@@ -148,8 +148,8 @@ p {
     position: absolute;
     z-index: 9999;
     border-radius: 50%;
-    height: 3.2em;
-    width: 3.2em;
+    height: 2.5em;
+    width: 2.5em;
     /* align-self: right; */
     top: 30px;
     right: 30px; }

@@ -16,14 +16,7 @@ export default class MeetAzRain extends Component {
         }
     }
     componentDidMount() {
-        
-        // axios.post('    https://api.instagram.com/oauth/access_token', {client_id:90890eee8b2f41688a6377a925efa561, client_secret:2b2c6bd3bae34796af249b4b8011e1f9, grant_type: authorization_code, redirect_uri:http://az-rain.com, code:ec644a81af5c4505ae17456c017466ee}).then(res => {
-        //     console.log(res.data);
-            
-        // this.setState({
-        //     // kittyList: res.data
-        // })
-        // }).catch(err => console.log('err', err));  
+    
     }
 
     helloWorld() {
