@@ -63,15 +63,6 @@
         align-items: center;
     }
 
-    // .xmlns {
-    //     height: 3.2em;
-    //     width: 3.2em;
-    //     /* left: 2.5em; */
-    //     /* position: absolute; */
-    //     /* top: 0.3em; */
-    //     fill: $darkPink;
-    // }
-
     .white-cat-logo {
         height: 3.2em;
         width: 3.2em;
@@ -81,28 +72,19 @@
 
     }
     .logo {
-        /* display: inline-block; */
-        /* display: flex; */
         font-family: 'Natalia Rosaline Sans Demo', sans-serif;
-        /* font-family: 'intro inline', sans-serif; */
-        /* position: absolute; */
         top: 0.3em;
         left: 0.6em;
-        /* background-color: green; */
     }
     
     .dropdown {
-        // position: relative;
         display: flex;
-        // flex-direction: column;
         justify-content: flex-end;
-
     }
 
     .header-main-list {
         font-size: 1.33rem;
         margin-left: 71px;
-
     }
     /* styling for navigation items */
     a {
@@ -113,7 +95,6 @@
 }
 
 @media (max-width: 812px) {
-    
     header {
         position: absolute;
         left: 0;
@@ -159,7 +140,6 @@
         font-size: 28px;
         font-family: 'muli', sans-serif;
         text-align: center;
-        // margin-top: 10px;
     }
 
     .menu-button {
@@ -169,7 +149,6 @@
         border-radius: 50%;
         height: 2.5em;
         width: 2.5em;
-        /* align-self: right; */
         top: 30px;
         right: 30px;
     }
@@ -211,10 +190,6 @@
      }
 
     header nav ul {
-        // min-width: 100vw;
-        // /* height: 300px; */
-        // /* flex-direction: column; */
-        // padding: 10px 0;
         padding: 20px 100px 200px 90px;
     }
 
@@ -224,6 +199,4 @@
         display: flex;
         justify-content: center;
     }
-
-    
 }
