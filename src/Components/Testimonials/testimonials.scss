@@ -2,14 +2,6 @@
 @import '../../App.scss';
 @import '../../assets';
 
-
-// .space-between-h1-and-h2 {
-//     height: 20px;
-// }
-// .meet-az-rain-subtext {
-//     max-width: 600px;;
-// }
-
 .testimonials-rows {
     display: flex;
     flex-direction: column;
@@ -25,9 +17,6 @@
         .testimonial-jordan-img{
             background-image: url("../../media/WQNR9570.jpg");
             border-radius: 50%;
-            // border-style: solid;
-            // border-color: $lightpink;
-            // border-width: 5px;
             height: 300px;
             width: 300px;
             background-size: contain;

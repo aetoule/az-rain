@@ -30,10 +30,8 @@ class CatBio extends Component {
     render() { 
         console.log(this.state.profile);
         let {profile} = this.state;
-        const {login, logout, admin} = this.props;
         return ( 
             <div className="entire-catbio-page-container">
-                {/* <div className="couch-cat"> */}
                 <div className="header-container">
                 </div>
                 <h1>Adopt a cat</h1>
