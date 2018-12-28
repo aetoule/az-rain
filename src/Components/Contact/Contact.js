@@ -80,12 +80,8 @@ export class Contact extends Component {
     const style = {
         height: '50vh',
         width: '50vw',
-        // top: '40%',
-
-        // z-index: 3;
         position: 'absolute',
         padding: '0px',
-        // border-width: '0px',
         margin: '40px',
         left: '0px',
         top: '-150px',
@@ -133,8 +129,6 @@ export class Contact extends Component {
                     </div>
                 </div>
             </div>
-            {/* <h2 className="google-maps-title-text">Find us here</h2> */}
-
             <div className="outside-map-container">
 
                 <div className="map-container">
@@ -150,7 +144,6 @@ export class Contact extends Component {
             
                     <InfoWindow onClose={this.onInfoWindowClose}>
                         <div>
-                        {/* <h1>{this.state.selectedPlace.name}</h1> */}
                         </div>
                     </InfoWindow>
                     </Map>

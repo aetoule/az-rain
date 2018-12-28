@@ -144,7 +144,7 @@ app.post('/send', (req, res, next) => {
   console.log('message', message);
   var mail = {
     from: name,
-    to: creds.USER,  //Change to email address that you want to receive messages on
+    to: creds.USER,  
     subject: 'New Message from Contact Form',
     text: content,
     html: `${content}`
