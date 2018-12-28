@@ -144,6 +144,7 @@ export class Contact extends Component {
             
                     <InfoWindow onClose={this.onInfoWindowClose}>
                         <div>
+
                         </div>
                     </InfoWindow>
                     </Map>
